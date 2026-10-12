@@ -1,0 +1,58 @@
+# Experiment-local environment for the Intel CPU study.
+#
+# This project installs the docling checkout at the repository root (editable)
+# and pins the inference runtimes to explicit versions, so that every machine
+# (cloud VM, Panther Lake Windows, Panther Lake Linux) resolves the same stack
+# from experiments/intel-cpu/uvproject/uv.lock. The upstream uv.lock is not modified.
+#
+#   uv sync --frozen --project experiments/intel-cpu/uvproject
+#
+[project]
+name = "docling-intel-cpu-exp"
+version = "0.0.0"
+description = "Reproducible environment for the docling Intel CPU experiments"
+requires-python = ">=3.12,<3.13"
+dependencies = [
+  "docling-slim[standard,feat-ocr-rapidocr-onnx]",
+  # Runtime pins requested for the study (latest releases at experiment start).
+  "torch==2.14.1",
+  "torchvision==0.29.1",
+  "onnxruntime==1.31.0",
+  # Used for RSS sampling and the correctness check against repo ground truth.
+  "psutil>=5.9",
+  "pytest>=8",
+]
+
+[tool.uv]
+package = false
+override-dependencies = [
+  "grpcio>=1.75.1",
+]
+constraint-dependencies = [
+  # Keep every shared package at the version in the upstream uv.lock
+  # (commit ad2e0e1a). Only the runtimes pinned above differ from upstream.
+  "dill==0.3.8",
+  "docling-core==2.100.0",
+  "faker==40.41.0",
+  "filelock==4.0.12",
+  "fsspec==2024.6.1",
+  "hf-xet==1.6.0",
+  "iniconfig==2.3.0",
+  "multiprocess==0.70.16",
+  "numpy==2.5.3",
+  "omegaconf==2.3.1",
+  "protobuf==6.33.6",
+  "pydantic==2.13.5",
+  "pydantic-core==2.46.5",
+  "pytest==9.0.3",
+  "rapidocr==3.9.2",
+  "shapely==2.1.2",
+  "soupsieve==2.10",
+  "tokenizers==0.23.2",
+  "transformers==5.18.0",
+]
+
+[tool.uv.workspace]
+
+[tool.uv.sources]
+docling-slim = { path = "../../..", editable = true }
