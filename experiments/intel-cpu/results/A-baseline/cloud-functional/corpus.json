@@ -1,0 +1,95 @@
+{
+  "description": "Intel CPU experiment corpus. Paths are relative to the repository root. SHA256 values are checked by scripts/corpus.py before every run.",
+  "documents": [
+    {
+      "id": "normal_4pages",
+      "path": "tests/data/pdf/sources/normal_4pages.pdf",
+      "category": "text-only",
+      "notes": "Born-digital, mostly running text.",
+      "groundtruth": "tests/data/pdf/groundtruth/normal_4pages",
+      "sha256": "ca9c83b1653221a66b30cdb543c1ef7b116827762ae65fca36b87b332532b51e",
+      "bytes": 359233,
+      "pages": 4
+    },
+    {
+      "id": "multi_page",
+      "path": "tests/data/pdf/sources/multi_page.pdf",
+      "category": "text-only",
+      "notes": "Born-digital, text with headings and lists.",
+      "groundtruth": "tests/data/pdf/groundtruth/multi_page",
+      "sha256": "956846c28f9ed9d3b5cbe071865c082bd415f56e3e299c479aeea1f615eefa61",
+      "bytes": 128322,
+      "pages": 5
+    },
+    {
+      "id": "2206.01062",
+      "path": "tests/data/pdf/sources/2206.01062.pdf",
+      "category": "tables+multi-column",
+      "notes": "DocLayNet paper. Two columns, several tables and figures.",
+      "groundtruth": "tests/data/pdf/groundtruth/2206.01062",
+      "sha256": "5dfbd8c115a15fd3396b68409124cfee29fc8efac7b5c846634ff924e635e0dc",
+      "bytes": 4310680,
+      "pages": 9
+    },
+    {
+      "id": "2203.01017v2",
+      "path": "tests/data/pdf/sources/2203.01017v2.pdf",
+      "category": "tables+multi-column",
+      "notes": "TableFormer paper. Two columns, many tables. Largest table workload in the corpus.",
+      "groundtruth": "tests/data/pdf/groundtruth/2203.01017v2",
+      "sha256": "4fa8dff93d74a84069210c84a38d14d62a39ec8f4e4c90bf955fdebdebcf6636",
+      "bytes": 7215177,
+      "pages": 16
+    },
+    {
+      "id": "redp5110_sampled",
+      "path": "tests/data/pdf/sources/redp5110_sampled.pdf",
+      "category": "tables",
+      "notes": "IBM Redbook sample. Tables, figures, code. Small text layer on page 1 (cover is an image).",
+      "groundtruth": "tests/data/pdf/groundtruth/redp5110_sampled",
+      "sha256": "2f6bc92861997d1434c069040dc63447c3e415e8e9eadbd1a8129ba2327ddba5",
+      "bytes": 1277938,
+      "pages": 18
+    },
+    {
+      "id": "table_misidentified_as_form",
+      "path": "tests/data/pdf/sources/table_misidentified_as_form.pdf",
+      "category": "tables",
+      "notes": "Single page with a dense table.",
+      "groundtruth": "tests/data/pdf/groundtruth/table_misidentified_as_form",
+      "sha256": "7e8e895d8b1d97676bbddf4274fe83b0c17ce1f3238078d0d705392ef81256ff",
+      "bytes": 1254021,
+      "pages": 1
+    },
+    {
+      "id": "newspaper-00",
+      "path": "tests/data/pdf/sources/newspaper-00.pdf",
+      "category": "multi-column",
+      "notes": "Newspaper page, many columns, dense text.",
+      "groundtruth": "tests/data/pdf/groundtruth/newspaper-00",
+      "sha256": "ba5f7a78792369ea36dbf2a554aa1635fa9f25983664ff17b406dca326279019",
+      "bytes": 620470,
+      "pages": 1
+    },
+    {
+      "id": "nemotron_multipage",
+      "path": "tests/data/ocr/sources/nemotron_multipage.pdf",
+      "category": "scanned/OCR",
+      "notes": "No text layer. All text comes from OCR when OCR is on.",
+      "groundtruth": null,
+      "sha256": "b4f6d15c517b5d6b0d674e1b4a04219903528c3601fd026f98eadc62c814f568",
+      "bytes": 372905,
+      "pages": 4
+    },
+    {
+      "id": "ocr_test",
+      "path": "tests/data/ocr/sources/ocr_test.pdf",
+      "category": "scanned/OCR",
+      "notes": "Single scanned page, no text layer. RapidOCR ground truth exists only for non-default OCR modes, so the baseline output is the reference.",
+      "groundtruth": null,
+      "sha256": "73f23122e9edbdb0a115b448e03c8064a0ea8bdc21d02917ce220cf032454f31",
+      "bytes": 93549,
+      "pages": 1
+    }
+  ]
+}

@@ -1,0 +1,60 @@
+{
+  "schema_name": "DoclingDocument",
+  "version": "1.10.0",
+  "name": "nemotron_multipage",
+  "origin": {
+    "mimetype": "application/pdf",
+    "binary_hash": 11018861755137062248,
+    "filename": "nemotron_multipage.pdf"
+  },
+  "furniture": {
+    "self_ref": "#/furniture",
+    "children": [],
+    "content_layer": "furniture",
+    "name": "_root_",
+    "label": "unspecified"
+  },
+  "body": {
+    "self_ref": "#/body",
+    "children": [],
+    "content_layer": "body",
+    "name": "_root_",
+    "label": "unspecified"
+  },
+  "groups": [],
+  "texts": [],
+  "pictures": [],
+  "tables": [],
+  "key_value_items": [],
+  "form_items": [],
+  "pages": {
+    "1": {
+      "size": {
+        "width": 595.20119,
+        "height": 841.921684
+      },
+      "page_no": 1
+    },
+    "2": {
+      "size": {
+        "width": 595.2011999999999,
+        "height": 841.9217000000001
+      },
+      "page_no": 2
+    },
+    "3": {
+      "size": {
+        "width": 841.9217,
+        "height": 595.2012
+      },
+      "page_no": 3
+    },
+    "4": {
+      "size": {
+        "width": 841.9217000000001,
+        "height": 595.2011999999999
+      },
+      "page_no": 4
+    }
+  }
+}

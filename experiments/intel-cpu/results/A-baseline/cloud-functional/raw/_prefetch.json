@@ -1,0 +1,129 @@
+{
+  "doc_id": "prefetch",
+  "doc": "tests/data/pdf/sources/table_misidentified_as_form.pdf",
+  "ocr": "on",
+  "config": {
+    "device": "cpu",
+    "num_threads_arg": null,
+    "num_threads_effective": 4,
+    "ocr_engine": "rapidocr",
+    "ocr_backend": "onnxruntime",
+    "layout_batch_size": 4,
+    "table_batch_size": 4,
+    "ocr_batch_size": 4,
+    "page_batch_size": 4,
+    "warmup": 0,
+    "runs": 0,
+    "rss_method": "psutil RSS sampled every 10.0 ms; OS high-water: ru_maxrss (POSIX) / PeakWorkingSetSize (Windows)"
+  },
+  "thread_env": {
+    "OMP_NUM_THREADS": null,
+    "OMP_PROC_BIND": null,
+    "OMP_PLACES": null,
+    "OMP_WAIT_POLICY": null,
+    "MKL_NUM_THREADS": null,
+    "MKL_DYNAMIC": null,
+    "OPENBLAS_NUM_THREADS": null,
+    "NUMEXPR_NUM_THREADS": null,
+    "KMP_AFFINITY": null,
+    "KMP_BLOCKTIME": null,
+    "KMP_HW_SUBSET": null,
+    "DNNL_MAX_CPU_ISA": null,
+    "ONEDNN_MAX_CPU_ISA": null,
+    "ORT_NUM_THREADS": null,
+    "OV_CPU_THREADS_NUM": null,
+    "TBB_NUM_THREADS": null,
+    "TORCH_NUM_THREADS": null,
+    "DOCLING_NUM_THREADS": null,
+    "DOCLING_DEVICE": null,
+    "DOCLING_PERF_PAGE_BATCH_SIZE": null,
+    "DOCLING_PERF_DOC_BATCH_SIZE": null,
+    "DOCLING_PERF_DOC_BATCH_CONCURRENCY": null,
+    "CUDA_VISIBLE_DEVICES": null
+  },
+  "torch_threads": {
+    "intra_op": 4,
+    "inter_op": 4
+  },
+  "platform": "Linux-6.18.44-fc-v114-x86_64-with-glibc2.39",
+  "pid_cpu_affinity": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "cold": {
+    "wall_s": 8.995366608999916,
+    "status": "success",
+    "pages": 1,
+    "timings": {
+      "pipeline_total": {
+        "total_s": 8.868482134000033,
+        "count": 1,
+        "scope": "document"
+      },
+      "page_parse": {
+        "total_s": 0.014771153999959097,
+        "count": 1,
+        "scope": "page"
+      },
+      "layout": {
+        "total_s": 1.8007007639999983,
+        "count": 1,
+        "scope": "page"
+      },
+      "ocr": {
+        "total_s": 4.653907152999977,
+        "count": 1,
+        "scope": "page"
+      },
+      "layout_postprocess": {
+        "total_s": 0.01400006099993334,
+        "count": 1,
+        "scope": "page"
+      },
+      "table_structure": {
+        "total_s": 2.2815226139999822,
+        "count": 1,
+        "scope": "page"
+      },
+      "page_assemble": {
+        "total_s": 0.0013505880000366233,
+        "count": 1,
+        "scope": "page"
+      },
+      "doc_assemble": {
+        "total_s": 0.035310999999978776,
+        "count": 1,
+        "scope": "document"
+      },
+      "reading_order": {
+        "total_s": 0.0340745620000007,
+        "count": 1,
+        "scope": "document"
+      },
+      "doc_enrich": {
+        "total_s": 0.0008033980000163865,
+        "count": 1,
+        "scope": "document"
+      }
+    },
+    "rss_peak_bytes": 2135085056,
+    "errors": [],
+    "import_s": 4.293668606999972,
+    "init_pipeline_s": 18.00420228600001,
+    "first_convert_s": 8.995366608999916,
+    "total_s": 31.293922517000055
+  },
+  "warmup": [],
+  "runs": [],
+  "rss_peak_by_phase_bytes": {
+    "startup": 19730432,
+    "import": 625618944,
+    "init": 1537298432,
+    "cold_convert": 2135085056,
+    "cold_convert:done": 1848643584
+  },
+  "process_peak_rss_os_bytes": 2135691264,
+  "outputs": null
+}

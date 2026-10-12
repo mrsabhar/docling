@@ -1,0 +1,148 @@
+{
+  "schema_name": "DoclingDocument",
+  "version": "1.10.0",
+  "name": "nemotron_multipage",
+  "origin": {
+    "mimetype": "application/pdf",
+    "binary_hash": 11018861755137062248,
+    "filename": "nemotron_multipage.pdf"
+  },
+  "furniture": {
+    "self_ref": "#/furniture",
+    "children": [],
+    "content_layer": "furniture",
+    "name": "_root_",
+    "label": "unspecified"
+  },
+  "body": {
+    "self_ref": "#/body",
+    "children": [
+      {
+        "$ref": "#/texts/0"
+      }
+    ],
+    "content_layer": "body",
+    "name": "_root_",
+    "label": "unspecified"
+  },
+  "groups": [],
+  "texts": [
+    {
+      "self_ref": "#/texts/0",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "text",
+      "prov": [
+        {
+          "page_no": 1,
+          "bbox": {
+            "l": 68.33333333333333,
+            "t": 770.921684,
+            "r": 508.6666666666667,
+            "b": 688.5883506666667,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            94
+          ]
+        },
+        {
+          "page_no": 2,
+          "bbox": {
+            "l": 86.0,
+            "t": 154.92168400000003,
+            "r": 528.0,
+            "b": 71.92168400000003,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            95,
+            165
+          ]
+        },
+        {
+          "page_no": 3,
+          "bbox": {
+            "l": 689.6666666666666,
+            "t": 595.2012,
+            "r": 769.6666666666666,
+            "b": 332.5883506666667,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            166,
+            260
+          ]
+        },
+        {
+          "page_no": 4,
+          "bbox": {
+            "l": 73.66666666666667,
+            "t": 595.2011999999999,
+            "r": 126.0,
+            "b": 314.2550173333333,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            261,
+            347
+          ]
+        },
+        {
+          "page_no": 4,
+          "bbox": {
+            "l": 129.33333333333334,
+            "t": 400.921684,
+            "r": 152.33333333333331,
+            "b": 316.2550173333333,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            348,
+            355
+          ]
+        }
+      ],
+      "orig": "Docling bundles PDF document conversion to JSON and Markdown in an easy self contained package package JSON and Markdown in an easy self contained Do co on d n sonto package JSON and Markdown in an easy self contained Docling bundles PDF document conversion to Docling bundles PDF document conversion to JSON and Markdown in an easy self contained package",
+      "text": "Docling bundles PDF document conversion to JSON and Markdown in an easy self contained package package JSON and Markdown in an easy self contained Do co on d n sonto package JSON and Markdown in an easy self contained Docling bundles PDF document conversion to Docling bundles PDF document conversion to JSON and Markdown in an easy self contained package"
+    }
+  ],
+  "pictures": [],
+  "tables": [],
+  "key_value_items": [],
+  "form_items": [],
+  "pages": {
+    "1": {
+      "size": {
+        "width": 595.20119,
+        "height": 841.921684
+      },
+      "page_no": 1
+    },
+    "2": {
+      "size": {
+        "width": 595.2011999999999,
+        "height": 841.9217000000001
+      },
+      "page_no": 2
+    },
+    "3": {
+      "size": {
+        "width": 841.9217,
+        "height": 595.2012
+      },
+      "page_no": 3
+    },
+    "4": {
+      "size": {
+        "width": 841.9217000000001,
+        "height": 595.2011999999999
+      },
+      "page_no": 4
+    }
+  }
+}

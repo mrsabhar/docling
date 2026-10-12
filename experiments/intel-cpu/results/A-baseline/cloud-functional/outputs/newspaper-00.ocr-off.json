@@ -1,0 +1,2095 @@
+{
+  "schema_name": "DoclingDocument",
+  "version": "1.10.0",
+  "name": "newspaper-00",
+  "origin": {
+    "mimetype": "application/pdf",
+    "binary_hash": 12972298369965199385,
+    "filename": "newspaper-00.pdf"
+  },
+  "furniture": {
+    "self_ref": "#/furniture",
+    "children": [],
+    "content_layer": "furniture",
+    "name": "_root_",
+    "label": "unspecified"
+  },
+  "body": {
+    "self_ref": "#/body",
+    "children": [
+      {
+        "$ref": "#/texts/0"
+      },
+      {
+        "$ref": "#/texts/1"
+      },
+      {
+        "$ref": "#/texts/2"
+      },
+      {
+        "$ref": "#/texts/3"
+      },
+      {
+        "$ref": "#/texts/4"
+      },
+      {
+        "$ref": "#/texts/5"
+      },
+      {
+        "$ref": "#/texts/6"
+      },
+      {
+        "$ref": "#/texts/7"
+      },
+      {
+        "$ref": "#/texts/8"
+      },
+      {
+        "$ref": "#/texts/9"
+      },
+      {
+        "$ref": "#/texts/10"
+      },
+      {
+        "$ref": "#/pictures/0"
+      },
+      {
+        "$ref": "#/texts/12"
+      },
+      {
+        "$ref": "#/pictures/1"
+      },
+      {
+        "$ref": "#/texts/15"
+      },
+      {
+        "$ref": "#/texts/16"
+      },
+      {
+        "$ref": "#/texts/17"
+      },
+      {
+        "$ref": "#/texts/18"
+      },
+      {
+        "$ref": "#/texts/19"
+      },
+      {
+        "$ref": "#/texts/20"
+      },
+      {
+        "$ref": "#/texts/21"
+      },
+      {
+        "$ref": "#/texts/22"
+      },
+      {
+        "$ref": "#/texts/23"
+      },
+      {
+        "$ref": "#/texts/24"
+      },
+      {
+        "$ref": "#/texts/25"
+      },
+      {
+        "$ref": "#/texts/26"
+      },
+      {
+        "$ref": "#/pictures/2"
+      },
+      {
+        "$ref": "#/texts/27"
+      },
+      {
+        "$ref": "#/pictures/3"
+      },
+      {
+        "$ref": "#/texts/28"
+      },
+      {
+        "$ref": "#/pictures/4"
+      },
+      {
+        "$ref": "#/texts/29"
+      },
+      {
+        "$ref": "#/pictures/5"
+      },
+      {
+        "$ref": "#/texts/31"
+      },
+      {
+        "$ref": "#/texts/32"
+      },
+      {
+        "$ref": "#/texts/33"
+      },
+      {
+        "$ref": "#/texts/34"
+      },
+      {
+        "$ref": "#/texts/35"
+      },
+      {
+        "$ref": "#/texts/36"
+      },
+      {
+        "$ref": "#/texts/37"
+      },
+      {
+        "$ref": "#/texts/38"
+      },
+      {
+        "$ref": "#/texts/39"
+      },
+      {
+        "$ref": "#/texts/40"
+      },
+      {
+        "$ref": "#/texts/41"
+      },
+      {
+        "$ref": "#/texts/42"
+      },
+      {
+        "$ref": "#/pictures/6"
+      },
+      {
+        "$ref": "#/texts/44"
+      },
+      {
+        "$ref": "#/texts/45"
+      },
+      {
+        "$ref": "#/texts/46"
+      },
+      {
+        "$ref": "#/texts/47"
+      },
+      {
+        "$ref": "#/texts/48"
+      },
+      {
+        "$ref": "#/texts/49"
+      },
+      {
+        "$ref": "#/texts/50"
+      },
+      {
+        "$ref": "#/texts/51"
+      },
+      {
+        "$ref": "#/texts/52"
+      },
+      {
+        "$ref": "#/pictures/7"
+      },
+      {
+        "$ref": "#/texts/53"
+      },
+      {
+        "$ref": "#/pictures/8"
+      },
+      {
+        "$ref": "#/texts/54"
+      },
+      {
+        "$ref": "#/pictures/9"
+      }
+    ],
+    "content_layer": "body",
+    "name": "_root_",
+    "label": "unspecified"
+  },
+  "groups": [],
+  "texts": [
+    {
+      "self_ref": "#/texts/0",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "furniture",
+      "label": "page_header",
+      "prov": [
+        {
+          "page_no": 1,
+          "bbox": {
+            "l": 28.3465,
+            "t": 816.7874300000001,
+            "r": 218.61791,
+            "b": 804.8414300000001,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            18
+          ]
+        }
+      ],
+      "orig": "2 AB JETZT DIGITAL",
+      "text": "2 AB JETZT DIGITAL"
+    },
+    {
+      "self_ref": "#/texts/1",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "furniture",
+      "label": "page_header",
+      "prov": [
+        {
+          "page_no": 1,
+          "bbox": {
+            "l": 457.95137,
+            "t": 811.0289300000001,
+            "r": 623.6287599999999,
+            "b": 803.3811800000001,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            40
+          ]
+        }
+      ],
+      "orig": "Dienstag, 23. Dezember 2025 20minuten.ch",
+      "text": "Dienstag, 23. Dezember 2025 20minuten.ch"
+    },
+    {
+      "self_ref": "#/texts/2",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "furniture",
+      "label": "page_header",
+      "prov": [
+        {
+          "page_no": 1,
+          "bbox": {
+            "l": 680.3155,
+            "t": 811.0289300000001,
+            "r": 845.99201,
+            "b": 803.3811800000001,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            40
+          ]
+        }
+      ],
+      "orig": "20minuten.ch Dienstag, 23. Dezember 2025",
+      "text": "20minuten.ch Dienstag, 23. Dezember 2025"
+    },
+    {
+      "self_ref": "#/texts/3",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "furniture",
+      "label": "page_header",
+      "prov": [
+        {
+          "page_no": 1,
+          "bbox": {
+            "l": 1085.31039,
+            "t": 816.7874300000001,
+            "r": 1225.98278,
+            "b": 804.8414300000001,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            16
+          ]
+        }
+      ],
+      "orig": "AB JETZT DIGITAL",
+      "text": "AB JETZT DIGITAL"
+    },
+    {
+      "self_ref": "#/texts/4",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "furniture",
+      "label": "page_header",
+      "prov": [
+        {
+          "page_no": 1,
+          "bbox": {
+            "l": 1266.03773,
+            "t": 816.7874300000001,
+            "r": 1275.59123,
+            "b": 804.8744300000001,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            1
+          ]
+        }
+      ],
+      "orig": "3",
+      "text": "3"
+    },
+    {
+      "self_ref": "#/texts/5",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "section_header",
+      "prov": [
+        {
+          "page_no": 1,
+          "bbox": {
+            "l": 28.346560000000096,
+            "t": 768.8929,
+            "r": 204.5423500000001,
+            "b": 727.5549000000001,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            26
+          ]
+        }
+      ],
+      "orig": "Liebe Leserinnen und Leser",
+      "text": "Liebe Leserinnen und Leser",
+      "level": 1
+    },
+    {
+      "self_ref": "#/texts/6",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "text",
+      "prov": [
+        {
+          "page_no": 1,
+          "bbox": {
+            "l": 28.34648,
+            "t": 720.3590117,
+            "r": 127.60035526717,
+            "b": 553.8230116999999,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            434
+          ]
+        }
+      ],
+      "orig": "Heute lest ihr die letzte Ausgabe der Pendlerzeitung 20 Minuten. Damit geht ein St\u00fcck Mediengeschichte zu Ende. 26 Jahre lang hat euch diese Zeitung Gespr\u00e4chsstoff geliefert. Auch wenn viele 20-MinutenFans uns schon lange ausschliesslich digital nutzen: Noch heute greifen mehr als 1,3 Millionen Leserinnen und Leser t\u00e4glich in die blaue Box. Unser Blatt tritt als klare Nummer 1 der Schweizer Tageszeitungen ab. Danke f\u00fcr eure Treue!",
+      "text": "Heute lest ihr die letzte Ausgabe der Pendlerzeitung 20 Minuten. Damit geht ein St\u00fcck Mediengeschichte zu Ende. 26 Jahre lang hat euch diese Zeitung Gespr\u00e4chsstoff geliefert. Auch wenn viele 20-MinutenFans uns schon lange ausschliesslich digital nutzen: Noch heute greifen mehr als 1,3 Millionen Leserinnen und Leser t\u00e4glich in die blaue Box. Unser Blatt tritt als klare Nummer 1 der Schweizer Tageszeitungen ab. Danke f\u00fcr eure Treue!"
+    },
+    {
+      "self_ref": "#/texts/7",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "text",
+      "prov": [
+        {
+          "page_no": 1,
+          "bbox": {
+            "l": 28.34649039999998,
+            "t": 550.3590117,
+            "r": 127.61841844895,
+            "b": 413.81950170000005,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            348
+          ]
+        },
+        {
+          "page_no": 1,
+          "bbox": {
+            "l": 137.4802909,
+            "t": 720.3590117,
+            "r": 236.73822090000004,
+            "b": 603.8195317,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            349,
+            652
+          ]
+        }
+      ],
+      "orig": "Der Dank gilt ebenso unserenWerbekunden, die 20 Minuten erst m\u00f6glich gemacht haben. Mittlerweile hat sich der Werbemarkt radikal ver\u00e4ndert - insbesondere seit der Pandemie. Aufgrund des Medienwandels fliessen Werbegelder vom Print hin zu vielf\u00e4ltigen Werbem\u00f6glichkeiten im digitalen Raum. Heute ist es nicht mehr m\u00f6glich, die hohen Kosten f\u00fcr Druck und Verteilung unserer Gratiszeitung zu tragen. Darum konzentrieren wir uns jetzt auf unser digitales Angebot, das schweizweit t\u00e4glich mehr als 4 Millionen Mal besucht wird - am h\u00e4ufigsten \u00fcber die App. Damit ist 20 Minuten die mit Abstand reichweitenst\u00e4rkste digitale Medienmarke in allen Landesteilen.",
+      "text": "Der Dank gilt ebenso unserenWerbekunden, die 20 Minuten erst m\u00f6glich gemacht haben. Mittlerweile hat sich der Werbemarkt radikal ver\u00e4ndert - insbesondere seit der Pandemie. Aufgrund des Medienwandels fliessen Werbegelder vom Print hin zu vielf\u00e4ltigen Werbem\u00f6glichkeiten im digitalen Raum. Heute ist es nicht mehr m\u00f6glich, die hohen Kosten f\u00fcr Druck und Verteilung unserer Gratiszeitung zu tragen. Darum konzentrieren wir uns jetzt auf unser digitales Angebot, das schweizweit t\u00e4glich mehr als 4 Millionen Mal besucht wird - am h\u00e4ufigsten \u00fcber die App. Damit ist 20 Minuten die mit Abstand reichweitenst\u00e4rkste digitale Medienmarke in allen Landesteilen."
+    },
+    {
+      "self_ref": "#/texts/8",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "text",
+      "prov": [
+        {
+          "page_no": 1,
+          "bbox": {
+            "l": 137.4803009,
+            "t": 600.3590117,
+            "r": 236.751626896896,
+            "b": 462.1510117,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            349
+          ]
+        }
+      ],
+      "orig": "Am Anfang dieser Erfolgsgeschichte stand unsere einzigartige Zeitung. In dieser Ausgabe w\u00fcrdigen wir die Medienrevolution 20 Minuten nochmals. Viel Vergn\u00fcgen mit dem Blick in die Vergangenheit. Und so weh der Abschied von der Zeitung tut: Wir freuen uns auf unsere gemeinsame Zukunft auf den digitalen Kan\u00e4len. In diesem Sinne: Jetzt App downloaden!",
+      "text": "Am Anfang dieser Erfolgsgeschichte stand unsere einzigartige Zeitung. In dieser Ausgabe w\u00fcrdigen wir die Medienrevolution 20 Minuten nochmals. Viel Vergn\u00fcgen mit dem Blick in die Vergangenheit. Und so weh der Abschied von der Zeitung tut: Wir freuen uns auf unsere gemeinsame Zukunft auf den digitalen Kan\u00e4len. In diesem Sinne: Jetzt App downloaden!"
+    },
+    {
+      "self_ref": "#/texts/9",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "section_header",
+      "prov": [
+        {
+          "page_no": 1,
+          "bbox": {
+            "l": 137.4803109,
+            "t": 458.9210117,
+            "r": 174.24153090000001,
+            "b": 452.69101170000005,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            9
+          ]
+        }
+      ],
+      "orig": "HERZLICH,",
+      "text": "HERZLICH,",
+      "level": 1
+    },
+    {
+      "self_ref": "#/texts/10",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "text",
+      "prov": [
+        {
+          "page_no": 1,
+          "bbox": {
+            "l": 137.48031090000003,
+            "t": 450.24802170000004,
+            "r": 227.99033089999995,
+            "b": 413.8410517,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            72
+          ]
+        }
+      ],
+      "orig": "D\u00c9SIR\u00c9E POMPER, CHEFREDAKTORIN BERNHARD BRECHB\u00dcHL, CEO 20-MINUTEN-GRUPPE",
+      "text": "D\u00c9SIR\u00c9E POMPER, CHEFREDAKTORIN BERNHARD BRECHB\u00dcHL, CEO 20-MINUTEN-GRUPPE"
+    },
+    {
+      "self_ref": "#/texts/11",
+      "parent": {
+        "$ref": "#/pictures/0"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "caption",
+      "prov": [
+        {
+          "page_no": 1,
+          "bbox": {
+            "l": 28.346479999999985,
+            "t": 229.92650000000003,
+            "r": 184.22203,
+            "b": 212.37050999999997,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            72
+          ]
+        }
+      ],
+      "orig": "20-Minuten-CEO Bernhard Brechb\u00fchl und ChefredaktorinD\u00e9sir\u00e9ePomper. 20min",
+      "text": "20-Minuten-CEO Bernhard Brechb\u00fchl und ChefredaktorinD\u00e9sir\u00e9ePomper. 20min"
+    },
+    {
+      "self_ref": "#/texts/12",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "section_header",
+      "prov": [
+        {
+          "page_no": 1,
+          "bbox": {
+            "l": 256.53540999999984,
+            "t": 769.30904,
+            "r": 619.1353999999998,
+            "b": 736.6190399999999,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            22
+          ]
+        }
+      ],
+      "orig": "\u00ab20 Minuten bringt die",
+      "text": "\u00ab20 Minuten bringt die",
+      "level": 1
+    },
+    {
+      "self_ref": "#/texts/13",
+      "parent": {
+        "$ref": "#/pictures/1"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "text",
+      "prov": [
+        {
+          "page_no": 1,
+          "bbox": {
+            "l": 267.8741099999999,
+            "t": 501.832,
+            "r": 377.99842999999987,
+            "b": 474.27702,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            77
+          ]
+        }
+      ],
+      "orig": "20-Minuten-Verleger und Verwaltungsratspr\u00e4sident der TX Group: Pietro Supino.",
+      "text": "20-Minuten-Verleger und Verwaltungsratspr\u00e4sident der TX Group: Pietro Supino."
+    },
+    {
+      "self_ref": "#/texts/14",
+      "parent": {
+        "$ref": "#/pictures/1"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "text",
+      "prov": [
+        {
+          "page_no": 1,
+          "bbox": {
+            "l": 267.87411999999983,
+            "t": 469.64251,
+            "r": 319.52860999999984,
+            "b": 465.54251,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            21
+          ]
+        }
+      ],
+      "orig": "20min/Taddeo Cerletti",
+      "text": "20min/Taddeo Cerletti"
+    },
+    {
+      "self_ref": "#/texts/15",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "text",
+      "prov": [
+        {
+          "page_no": 1,
+          "bbox": {
+            "l": 256.5330099999999,
+            "t": 440.68050999999997,
+            "r": 489.7420499999999,
+            "b": 418.37176,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            99
+          ]
+        }
+      ],
+      "orig": "Z\u00dcRICH Verleger Pietro Supino \u00fcber das Printende, zu Big Tech abfliessende Werbegelder und die SRG.",
+      "text": "Z\u00dcRICH Verleger Pietro Supino \u00fcber das Printende, zu Big Tech abfliessende Werbegelder und die SRG."
+    },
+    {
+      "self_ref": "#/texts/16",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "section_header",
+      "prov": [
+        {
+          "page_no": 1,
+          "bbox": {
+            "l": 256.53539,
+            "t": 409.92651,
+            "r": 367.57468,
+            "b": 373.84104,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            118
+          ]
+        }
+      ],
+      "orig": "Pietro Supino, heute endet mit der letzten Printausgabe von 20 Minuten nach 26 Jahren eine \u00c4ra. Wie f\u00fchlt sich das an?",
+      "text": "Pietro Supino, heute endet mit der letzten Printausgabe von 20 Minuten nach 26 Jahren eine \u00c4ra. Wie f\u00fchlt sich das an?",
+      "level": 1
+    },
+    {
+      "self_ref": "#/texts/17",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "text",
+      "prov": [
+        {
+          "page_no": 1,
+          "bbox": {
+            "l": 256.53539000000006,
+            "t": 370.35902000000004,
+            "r": 370.9334604,
+            "b": 213.8420317,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            454
+          ]
+        }
+      ],
+      "orig": "Wehm\u00fctig. Ich habe noch das Bild vor Augen, wie 20 Minuten am Tag der Lancierung in Z\u00fcrich am Bellevue verteilt wurde. Wir waren damals nicht beteiligt. Ichwar skeptisch.Wer h\u00e4tte gedacht, dass 20 Minuten die gr\u00f6sste und wichtigste nationale Medienmarke werden k\u00f6nnte? Die Erfolgsgeschichte von 20 Minuten ist beeindruckend! Tats\u00e4chlich war 20 Minuten eine der rentabelsten Zeitungen Europas. Sp\u00e4ter wurde 20 Minuten auch online zur Nummer 1. Was ist das",
+      "text": "Wehm\u00fctig. Ich habe noch das Bild vor Augen, wie 20 Minuten am Tag der Lancierung in Z\u00fcrich am Bellevue verteilt wurde. Wir waren damals nicht beteiligt. Ichwar skeptisch.Wer h\u00e4tte gedacht, dass 20 Minuten die gr\u00f6sste und wichtigste nationale Medienmarke werden k\u00f6nnte? Die Erfolgsgeschichte von 20 Minuten ist beeindruckend! Tats\u00e4chlich war 20 Minuten eine der rentabelsten Zeitungen Europas. Sp\u00e4ter wurde 20 Minuten auch online zur Nummer 1. Was ist das"
+    },
+    {
+      "self_ref": "#/texts/18",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "section_header",
+      "prov": [
+        {
+          "page_no": 1,
+          "bbox": {
+            "l": 382.8923804000001,
+            "t": 409.9280417000001,
+            "r": 450.10183039999976,
+            "b": 402.2720417000001,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            17
+          ]
+        }
+      ],
+      "orig": "Erfolgsgeheimnis?",
+      "text": "Erfolgsgeheimnis?",
+      "level": 1
+    },
+    {
+      "self_ref": "#/texts/19",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "text",
+      "prov": [
+        {
+          "page_no": 1,
+          "bbox": {
+            "l": 382.8976135,
+            "t": 400.35901170000005,
+            "r": 497.3067512942109,
+            "b": 322.0370117,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            222
+          ]
+        }
+      ],
+      "orig": "20 Minuten wollte den Menschen ein neues Erlebnis bieten: in kurzer Zeit solide informieren und dar\u00fcber hinaus unterhalten. Das Konzept war eine Innovation. Nach der \u00dcbernahme haben wir die Qualit\u00e4t systematisch ausgebaut.",
+      "text": "20 Minuten wollte den Menschen ein neues Erlebnis bieten: in kurzer Zeit solide informieren und dar\u00fcber hinaus unterhalten. Das Konzept war eine Innovation. Nach der \u00dcbernahme haben wir die Qualit\u00e4t systematisch ausgebaut."
+    },
+    {
+      "self_ref": "#/texts/20",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "text",
+      "prov": [
+        {
+          "page_no": 1,
+          "bbox": {
+            "l": 382.89759349999997,
+            "t": 319.9265117,
+            "r": 496.3928235,
+            "b": 302.2715217,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            61
+          ]
+        }
+      ],
+      "orig": "20 Minuten war in der Vergangenheit oft ein First Mover. Wer-",
+      "text": "20 Minuten war in der Vergangenheit oft ein First Mover. Wer-"
+    },
+    {
+      "self_ref": "#/texts/21",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "text",
+      "prov": [
+        {
+          "page_no": 1,
+          "bbox": {
+            "l": 388.62991,
+            "t": 275.41701,
+            "r": 490.54350999999997,
+            "b": 226.08501,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            67
+          ]
+        }
+      ],
+      "orig": "\u00abNach der \u00dcbernahme haben wir die Qualit\u00e4t systematisch ausgebaut.\u00bb",
+      "text": "\u00abNach der \u00dcbernahme haben wir die Qualit\u00e4t systematisch ausgebaut.\u00bb"
+    },
+    {
+      "self_ref": "#/texts/22",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "section_header",
+      "prov": [
+        {
+          "page_no": 1,
+          "bbox": {
+            "l": 509.2545735,
+            "t": 439.93103170000006,
+            "r": 616.5582135,
+            "b": 413.84455170000007,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            66
+          ]
+        }
+      ],
+      "orig": "den bald auch weitere Medien ihre gedruckten Zeitungen einstellen?",
+      "text": "den bald auch weitere Medien ihre gedruckten Zeitungen einstellen?",
+      "level": 1
+    },
+    {
+      "self_ref": "#/texts/23",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "text",
+      "prov": [
+        {
+          "page_no": 1,
+          "bbox": {
+            "l": 509.2597635,
+            "t": 410.3590217000001,
+            "r": 623.6578761,
+            "b": 332.0370117,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            223
+          ]
+        }
+      ],
+      "orig": "20 Minuten ist ein anderes Modell als Abo-Zeitungen. Darum w\u00fcrde ich von 20 Minuten nicht ableiten, was f\u00fcr Abo-Zeitungen gilt. Aber der Trend, dass Print r\u00fcckl\u00e4ufig ist und das Digitale w\u00e4chst, gilt auch f\u00fcr Abo-Zeitungen.",
+      "text": "20 Minuten ist ein anderes Modell als Abo-Zeitungen. Darum w\u00fcrde ich von 20 Minuten nicht ableiten, was f\u00fcr Abo-Zeitungen gilt. Aber der Trend, dass Print r\u00fcckl\u00e4ufig ist und das Digitale w\u00e4chst, gilt auch f\u00fcr Abo-Zeitungen."
+    },
+    {
+      "self_ref": "#/texts/24",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "text",
+      "prov": [
+        {
+          "page_no": 1,
+          "bbox": {
+            "l": 509.2596960999996,
+            "t": 329.9265117,
+            "r": 623.5783560999994,
+            "b": 253.84508170000004,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            237
+          ]
+        }
+      ],
+      "orig": "20 Minuten war immer gratis. Damit erreicht es alle Menschen und sozialen Schichten. Zudem berichtet 20 Minuten ideologiefrei \u00fcber politische Themen. Untersch\u00e4tzt man den Beitrag, den 20 Minuten zu einer informiertenGesellschaft leistet?",
+      "text": "20 Minuten war immer gratis. Damit erreicht es alle Menschen und sozialen Schichten. Zudem berichtet 20 Minuten ideologiefrei \u00fcber politische Themen. Untersch\u00e4tzt man den Beitrag, den 20 Minuten zu einer informiertenGesellschaft leistet?"
+    },
+    {
+      "self_ref": "#/texts/25",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "text",
+      "prov": [
+        {
+          "page_no": 1,
+          "bbox": {
+            "l": 509.2597961,
+            "t": 250.3589965,
+            "r": 623.6644761000001,
+            "b": 212.54999650000002,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            118
+          ]
+        }
+      ],
+      "orig": "Man muss unterscheiden: untersch\u00e4tzt vom Publikum oder in einer elit\u00e4ren Betrachtung? Vom Publikum sicher nicht, darum",
+      "text": "Man muss unterscheiden: untersch\u00e4tzt vom Publikum oder in einer elit\u00e4ren Betrachtung? Vom Publikum sicher nicht, darum"
+    },
+    {
+      "self_ref": "#/texts/26",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "text",
+      "prov": [
+        {
+          "page_no": 1,
+          "bbox": {
+            "l": 38.26758000000028,
+            "t": 170.35902999999996,
+            "r": 152.81872,
+            "b": 43.84956,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            320
+          ]
+        }
+      ],
+      "orig": "\u00abSeit den ersten Ausgab zen wir die Pendlerzeitu um Menschen unterweg erreichen. Unvergessen die komplett gelbe Ausg zur Lancierung von Rive Gelb. Auch k\u00fcnftig setze mit Rivella und Focuswater auf 20 Minuten als starke Plattform im digitalen Raum.\u00bb Silvan Brauen, Rivella-Co-CEO ben nutung, gs zu bleibt gabe ella en wir",
+      "text": "\u00abSeit den ersten Ausgab zen wir die Pendlerzeitu um Menschen unterweg erreichen. Unvergessen die komplett gelbe Ausg zur Lancierung von Rive Gelb. Auch k\u00fcnftig setze mit Rivella und Focuswater auf 20 Minuten als starke Plattform im digitalen Raum.\u00bb Silvan Brauen, Rivella-Co-CEO ben nutung, gs zu bleibt gabe ella en wir"
+    },
+    {
+      "self_ref": "#/texts/27",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "text",
+      "prov": [
+        {
+          "page_no": 1,
+          "bbox": {
+            "l": 245.19676000000027,
+            "t": 170.35900000000004,
+            "r": 342.1823,
+            "b": 42.51202999999998,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            303
+          ]
+        }
+      ],
+      "orig": "\u00abMein Medienkonsum hat sich bereits stark ins Digitale verlagert. 20 Minuten ist f\u00fcr mich eine praktische t\u00e4gliche Orientierungshilfe: schnell, kostenlos zug\u00e4nglich und thematisch breit genug, um mir einen \u00dcberblick zu geben. Die App f\u00fchlt sich an wie der direkte Draht zur Schweiz.\u00bb Manuela Frey, Model",
+      "text": "\u00abMein Medienkonsum hat sich bereits stark ins Digitale verlagert. 20 Minuten ist f\u00fcr mich eine praktische t\u00e4gliche Orientierungshilfe: schnell, kostenlos zug\u00e4nglich und thematisch breit genug, um mir einen \u00dcberblick zu geben. Die App f\u00fchlt sich an wie der direkte Draht zur Schweiz.\u00bb Manuela Frey, Model"
+    },
+    {
+      "self_ref": "#/texts/28",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "text",
+      "prov": [
+        {
+          "page_no": 1,
+          "bbox": {
+            "l": 425.19681,
+            "t": 170.35900000000004,
+            "r": 540.42235,
+            "b": 42.51202999999998,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            320
+          ]
+        }
+      ],
+      "orig": "\u00ab20 Minuten hat mit eine innovativen Konzept den Schweizer Medienmarkt mischt und ist rasch zur ten Tageszeitung geword Mit der Coop-Zeitung Weekly waren wir Teil dieser Erfolgsgeschichte. Mit 20 Minuten digital kann ich jederzeit und \u00fcberall erfahren, was die Schweiz bewegt.\u00bb Philipp Wyss, Coop-CEO em n aufgegr\u00f6ssden.",
+      "text": "\u00ab20 Minuten hat mit eine innovativen Konzept den Schweizer Medienmarkt mischt und ist rasch zur ten Tageszeitung geword Mit der Coop-Zeitung Weekly waren wir Teil dieser Erfolgsgeschichte. Mit 20 Minuten digital kann ich jederzeit und \u00fcberall erfahren, was die Schweiz bewegt.\u00bb Philipp Wyss, Coop-CEO em n aufgegr\u00f6ssden."
+    },
+    {
+      "self_ref": "#/texts/29",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "section_header",
+      "prov": [
+        {
+          "page_no": 1,
+          "bbox": {
+            "l": 665.4059100000002,
+            "t": 769.30902,
+            "r": 1272.7959300000002,
+            "b": 743.2690200000001,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            33
+          ]
+        }
+      ],
+      "orig": "Menschen in der Schweiz zusammen\u00bb",
+      "text": "Menschen in der Schweiz zusammen\u00bb",
+      "level": 1
+    },
+    {
+      "self_ref": "#/texts/30",
+      "parent": {
+        "$ref": "#/pictures/5"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "caption",
+      "prov": [
+        {
+          "page_no": 1,
+          "bbox": {
+            "l": 680.3155,
+            "t": 561.45276,
+            "r": 1166.3432500000004,
+            "b": 552.27051,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            140
+          ]
+        }
+      ],
+      "orig": "Bereit f\u00fcr die digitale \u00c4ra: Das Team von 20 Minuten bietet rund um die Uhr News, Inspiration, Unterhaltung und Sport. 20min/Taddeo Cerletti",
+      "text": "Bereit f\u00fcr die digitale \u00c4ra: Das Team von 20 Minuten bietet rund um die Uhr News, Inspiration, Unterhaltung und Sport. 20min/Taddeo Cerletti"
+    },
+    {
+      "self_ref": "#/texts/31",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "text",
+      "prov": [
+        {
+          "page_no": 1,
+          "bbox": {
+            "l": 680.3157007000001,
+            "t": 540.3590117,
+            "r": 791.4850677405831,
+            "b": 503.82301170000005,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            89
+          ]
+        }
+      ],
+      "orig": "wurde es auch so ein Erfolg. Aber in einer akademischen Betrachtung wahrscheinlich schon.",
+      "text": "wurde es auch so ein Erfolg. Aber in einer akademischen Betrachtung wahrscheinlich schon."
+    },
+    {
+      "self_ref": "#/texts/32",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "text",
+      "prov": [
+        {
+          "page_no": 1,
+          "bbox": {
+            "l": 685.9847,
+            "t": 476.983,
+            "r": 767.00872,
+            "b": 431.2149999999999,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            62
+          ]
+        }
+      ],
+      "orig": "\u00abSubventionierte Angebote dienen meistens dem Strukturerhalt.\u00bb",
+      "text": "\u00abSubventionierte Angebote dienen meistens dem Strukturerhalt.\u00bb"
+    },
+    {
+      "self_ref": "#/texts/33",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "text",
+      "prov": [
+        {
+          "page_no": 1,
+          "bbox": {
+            "l": 680.3157007000001,
+            "t": 399.92651170000005,
+            "r": 787.3924707000001,
+            "b": 292.2806117000001,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            278
+          ]
+        }
+      ],
+      "orig": "Werbegelder fliessen in ungebrochenem Tempo ins Silicon Valleyab. DerAbflussvon Schweizer Werbegeldern zu den Big-Tech-Firmen betrug 2024 2,2 Milliarden Franken. Noch 176 Millionen Franken flossen zu Schweizer Newsplattformen. Was passiert, wenn diese Entwicklung so weitergeht?",
+      "text": "Werbegelder fliessen in ungebrochenem Tempo ins Silicon Valleyab. DerAbflussvon Schweizer Werbegeldern zu den Big-Tech-Firmen betrug 2024 2,2 Milliarden Franken. Noch 176 Millionen Franken flossen zu Schweizer Newsplattformen. Was passiert, wenn diese Entwicklung so weitergeht?"
+    },
+    {
+      "self_ref": "#/texts/34",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "text",
+      "prov": [
+        {
+          "page_no": 1,
+          "bbox": {
+            "l": 680.3157007000001,
+            "t": 290.3590117000001,
+            "r": 791.4913807,
+            "b": 213.82299650000004,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            224
+          ]
+        }
+      ],
+      "orig": "Auf demWerbemarkt stehen wir am st\u00e4rksten unter Druck. Wir m\u00fcssen imWettbewerb mit den globalen Angeboten andere, spezielle Qualit\u00e4ten bieten und diese vermarkten. Darum haben wir bei 20 Minuten den Verkauf wieder zur\u00fcck ins",
+      "text": "Auf demWerbemarkt stehen wir am st\u00e4rksten unter Druck. Wir m\u00fcssen imWettbewerb mit den globalen Angeboten andere, spezielle Qualit\u00e4ten bieten und diese vermarkten. Darum haben wir bei 20 Minuten den Verkauf wieder zur\u00fcck ins"
+    },
+    {
+      "self_ref": "#/texts/35",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "section_header",
+      "prov": [
+        {
+          "page_no": 1,
+          "bbox": {
+            "l": 801.3550016,
+            "t": 540.3590117,
+            "r": 880.2268416000001,
+            "b": 532.0370117,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            19
+          ]
+        }
+      ],
+      "orig": "Unternehmen geholt.",
+      "text": "Unternehmen geholt.",
+      "level": 1
+    },
+    {
+      "self_ref": "#/texts/36",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "text",
+      "prov": [
+        {
+          "page_no": 1,
+          "bbox": {
+            "l": 801.3549916000001,
+            "t": 529.9265117,
+            "r": 909.9909916000001,
+            "b": 473.84303170000004,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            145
+          ]
+        }
+      ],
+      "orig": "Liegt es nicht auch in der Verantwortung von Schweizer Unternehmen, einen Teil ihres Mediabudgets in unabh\u00e4ngige Schweizer Medien zu investieren?",
+      "text": "Liegt es nicht auch in der Verantwortung von Schweizer Unternehmen, einen Teil ihres Mediabudgets in unabh\u00e4ngige Schweizer Medien zu investieren?"
+    },
+    {
+      "self_ref": "#/texts/37",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "text",
+      "prov": [
+        {
+          "page_no": 1,
+          "bbox": {
+            "l": 801.3549916000001,
+            "t": 470.35903170000006,
+            "r": 912.5240016000001,
+            "b": 403.82301170000005,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            201
+          ]
+        }
+      ],
+      "orig": "Es ist unsere Aufgabe, mit guten Inhalten ein spannendes Publikum zu erreichen und attraktiveWerbem\u00f6glichkeiten zu bieten, sodass Unternehmen gerne bei unsWerbung platzieren. Das ist bei 20 Minuten der",
+      "text": "Es ist unsere Aufgabe, mit guten Inhalten ein spannendes Publikum zu erreichen und attraktiveWerbem\u00f6glichkeiten zu bieten, sodass Unternehmen gerne bei unsWerbung platzieren. Das ist bei 20 Minuten der"
+    },
+    {
+      "self_ref": "#/texts/38",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "text",
+      "prov": [
+        {
+          "page_no": 1,
+          "bbox": {
+            "l": 801.3550016,
+            "t": 400.35901170000005,
+            "r": 908.2148016000001,
+            "b": 392.1510117,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            31
+          ]
+        }
+      ],
+      "orig": "Fall und der Trend ist positiv.",
+      "text": "Fall und der Trend ist positiv."
+    },
+    {
+      "self_ref": "#/texts/39",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "text",
+      "prov": [
+        {
+          "page_no": 1,
+          "bbox": {
+            "l": 801.3549916,
+            "t": 389.92651170000005,
+            "r": 911.8645415999999,
+            "b": 322.2765717000001,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            192
+          ]
+        }
+      ],
+      "orig": "Auch bei TX gab es einen grossen Stellenabbau. Kritiker sind der Meinung: Es braucht eine Quersubventionierung, tiefere Renditeforderungen oder staatliche Subventionierung. Was sagen Sie dazu?",
+      "text": "Auch bei TX gab es einen grossen Stellenabbau. Kritiker sind der Meinung: Es braucht eine Quersubventionierung, tiefere Renditeforderungen oder staatliche Subventionierung. Was sagen Sie dazu?"
+    },
+    {
+      "self_ref": "#/texts/40",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "text",
+      "prov": [
+        {
+          "page_no": 1,
+          "bbox": {
+            "l": 801.3549916,
+            "t": 320.35903170000006,
+            "r": 912.5230516,
+            "b": 212.0369965,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            320
+          ]
+        },
+        {
+          "page_no": 1,
+          "bbox": {
+            "l": 922.3942930000001,
+            "t": 540.3590117,
+            "r": 1033.553813,
+            "b": 442.03701170000005,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            321,
+            605
+          ]
+        }
+      ],
+      "orig": "Medien leben davon, dass sie einen Mehrwert f\u00fcr ihr Publikum schaffen. F\u00fcr die Gesellschaft haben Medien einen Wert, wenn sie diese erreichen und ihre Bed\u00fcrfnisse erf\u00fcllen. Dann finden sie auch eine wirtschaftliche Basis und sind unabh\u00e4ngig. Die Unabh\u00e4ngigkeit ist in meinem Credo die wichtigste Ambition. Subventionierte Angebote dienen meistens dem Strukturerhalt und der Verbreitung von Inhalten, die aus Sicht des Publikums verzichtbar sind. Es widerspricht meiner Vorstellung einer freien Gesellschaft, das Medienangebot staatlich vorzugeben. So w\u00fcrde sich die Katze in den eigenen Schwanz beissen.",
+      "text": "Medien leben davon, dass sie einen Mehrwert f\u00fcr ihr Publikum schaffen. F\u00fcr die Gesellschaft haben Medien einen Wert, wenn sie diese erreichen und ihre Bed\u00fcrfnisse erf\u00fcllen. Dann finden sie auch eine wirtschaftliche Basis und sind unabh\u00e4ngig. Die Unabh\u00e4ngigkeit ist in meinem Credo die wichtigste Ambition. Subventionierte Angebote dienen meistens dem Strukturerhalt und der Verbreitung von Inhalten, die aus Sicht des Publikums verzichtbar sind. Es widerspricht meiner Vorstellung einer freien Gesellschaft, das Medienangebot staatlich vorzugeben. So w\u00fcrde sich die Katze in den eigenen Schwanz beissen."
+    },
+    {
+      "self_ref": "#/texts/41",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "text",
+      "prov": [
+        {
+          "page_no": 1,
+          "bbox": {
+            "l": 922.394313,
+            "t": 439.92651170000005,
+            "r": 1032.6374230000001,
+            "b": 422.27152170000005,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            55
+          ]
+        },
+        {
+          "page_no": 1,
+          "bbox": {
+            "l": 1043.4336812000001,
+            "t": 540.3590117,
+            "r": 1154.6055412,
+            "b": 443.82301170000005,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            56,
+            347
+          ]
+        }
+      ],
+      "orig": "Geb\u00fchrenfinanzierte Onlineangebote konkurrenzieren primachen. Der Name sagt es. Es gibt keine Notwendigkeit und keine Legitimation, dar\u00fcber hinaus mit Geb\u00fchrengeld Onlineangebote zu schaffen. Das muss in der Konzession geregelt werden. Wenn die Politik es nicht tut und die SRG sich nicht selbst besinnt, riskiert sie, vor dem Volk zu verlieren.",
+      "text": "Geb\u00fchrenfinanzierte Onlineangebote konkurrenzieren primachen. Der Name sagt es. Es gibt keine Notwendigkeit und keine Legitimation, dar\u00fcber hinaus mit Geb\u00fchrengeld Onlineangebote zu schaffen. Das muss in der Konzession geregelt werden. Wenn die Politik es nicht tut und die SRG sich nicht selbst besinnt, riskiert sie, vor dem Volk zu verlieren."
+    },
+    {
+      "self_ref": "#/texts/42",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "text",
+      "prov": [
+        {
+          "page_no": 1,
+          "bbox": {
+            "l": 1043.4336712,
+            "t": 439.92651170000005,
+            "r": 1151.0021312000001,
+            "b": 422.27152170000005,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            57
+          ]
+        }
+      ],
+      "orig": "ImM\u00e4rz stimmen wir \u00fcber die SRG-Halbierungsinitiative ab.",
+      "text": "ImM\u00e4rz stimmen wir \u00fcber die SRG-Halbierungsinitiative ab."
+    },
+    {
+      "self_ref": "#/texts/43",
+      "parent": {
+        "$ref": "#/pictures/6"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "caption",
+      "prov": [
+        {
+          "page_no": 1,
+          "bbox": {
+            "l": 922.6776000000002,
+            "t": 289.92651,
+            "r": 1141.0667300000002,
+            "b": 282.27051000000006,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            59
+          ]
+        }
+      ],
+      "orig": "ChefredaktorinPompermitVerlegerSupino. 20min/TaddeoCerletti",
+      "text": "ChefredaktorinPompermitVerlegerSupino. 20min/TaddeoCerletti"
+    },
+    {
+      "self_ref": "#/texts/44",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "section_header",
+      "prov": [
+        {
+          "page_no": 1,
+          "bbox": {
+            "l": 922.394303,
+            "t": 269.92703170000004,
+            "r": 1025.7916030000001,
+            "b": 243.8405517000001,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            73
+          ]
+        }
+      ],
+      "orig": "vate Medien wie 20 Minuten direkt. Was erwarten Sie hier von der Politik?",
+      "text": "vate Medien wie 20 Minuten direkt. Was erwarten Sie hier von der Politik?",
+      "level": 1
+    },
+    {
+      "self_ref": "#/texts/45",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "text",
+      "prov": [
+        {
+          "page_no": 1,
+          "bbox": {
+            "l": 922.3942930000001,
+            "t": 240.3589965,
+            "r": 1033.5499730000001,
+            "b": 213.82299650000004,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            81
+          ]
+        }
+      ],
+      "orig": "Das Schweizer Radio und Fernsehen SRF wurde geschaffen, um Radio und Fernsehen zu",
+      "text": "Das Schweizer Radio und Fernsehen SRF wurde geschaffen, um Radio und Fernsehen zu"
+    },
+    {
+      "self_ref": "#/texts/46",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "section_header",
+      "prov": [
+        {
+          "page_no": 1,
+          "bbox": {
+            "l": 1043.4336712000002,
+            "t": 269.92703170000004,
+            "r": 1137.9003112,
+            "b": 262.2710317000001,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            26
+          ]
+        }
+      ],
+      "orig": "Was ist Ihre Haltung dazu?",
+      "text": "Was ist Ihre Haltung dazu?",
+      "level": 1
+    },
+    {
+      "self_ref": "#/texts/47",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "text",
+      "prov": [
+        {
+          "page_no": 1,
+          "bbox": {
+            "l": 1043.433681236947,
+            "t": 260.3589965,
+            "r": 1154.5865312,
+            "b": 212.0369965,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            139
+          ]
+        },
+        {
+          "page_no": 1,
+          "bbox": {
+            "l": 1164.4730283,
+            "t": 540.3569865000001,
+            "r": 1275.8284112000001,
+            "b": 323.81950170000005,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            140,
+            782
+          ]
+        }
+      ],
+      "orig": "Die Eidgen\u00f6ssische Wettbewerbskommission hat festgehalten, dass die SRG mit ihrem Onlineangebot das private Medienangebot direkt konkurrenziert. Das ist das Problem. Mir geht es nicht um die Finanzierung, ich stehe der SRG positiv gegen\u00fcber. Aber sie muss sich auf Radio und Fernsehen beschr\u00e4nken. Nat\u00fcrlich auch \u00fcber digitale Verbreitungskan\u00e4le. Daf\u00fcr kann man das Geb\u00fchrengeld sehr gut und sinnvoll einsetzen. Ich denke etwa an Schweizer Filme, an grosse Anl\u00e4sse wie den Eurovision Song Contest, an den Kulturbereich und an Sport\u00fcbertragungen wie das Lauberhornrennen. Wenn die SRG mit demGeb\u00fchrengeld stattdessen Onlinemedien entwickelt und damit die Existenz des privaten Angebots gef\u00e4hrdet, braucht sie die Mittel offenbar nicht f\u00fcr Radio und Fernsehen. Das finde ich schade.",
+      "text": "Die Eidgen\u00f6ssische Wettbewerbskommission hat festgehalten, dass die SRG mit ihrem Onlineangebot das private Medienangebot direkt konkurrenziert. Das ist das Problem. Mir geht es nicht um die Finanzierung, ich stehe der SRG positiv gegen\u00fcber. Aber sie muss sich auf Radio und Fernsehen beschr\u00e4nken. Nat\u00fcrlich auch \u00fcber digitale Verbreitungskan\u00e4le. Daf\u00fcr kann man das Geb\u00fchrengeld sehr gut und sinnvoll einsetzen. Ich denke etwa an Schweizer Filme, an grosse Anl\u00e4sse wie den Eurovision Song Contest, an den Kulturbereich und an Sport\u00fcbertragungen wie das Lauberhornrennen. Wenn die SRG mit demGeb\u00fchrengeld stattdessen Onlinemedien entwickelt und damit die Existenz des privaten Angebots gef\u00e4hrdet, braucht sie die Mittel offenbar nicht f\u00fcr Radio und Fernsehen. Das finde ich schade."
+    },
+    {
+      "self_ref": "#/texts/48",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "section_header",
+      "prov": [
+        {
+          "page_no": 1,
+          "bbox": {
+            "l": 1164.4730283,
+            "t": 319.86051169999996,
+            "r": 1275.6327182999999,
+            "b": 293.84003170000005,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            72
+          ]
+        }
+      ],
+      "orig": "Zum Schluss: Was w\u00fcnschen Sie 20 Minuten und 20 Minutes f\u00fcr die Zukunft?",
+      "text": "Zum Schluss: Was w\u00fcnschen Sie 20 Minuten und 20 Minutes f\u00fcr die Zukunft?",
+      "level": 1
+    },
+    {
+      "self_ref": "#/texts/49",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "text",
+      "prov": [
+        {
+          "page_no": 1,
+          "bbox": {
+            "l": 1164.4730283,
+            "t": 290.3590217000001,
+            "r": 1275.6267982999998,
+            "b": 222.0369965,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            198
+          ]
+        }
+      ],
+      "orig": "Dass 20 Minuten einen gesellschaftlichen Mehrwert schafft: das Publikum gut informiert und unterh\u00e4lt, inspiriert und die Menschen in der Schweiz zusammenbringt. In diesem Sinn weiterhin viel Erfolg!",
+      "text": "Dass 20 Minuten einen gesellschaftlichen Mehrwert schafft: das Publikum gut informiert und unterh\u00e4lt, inspiriert und die Menschen in der Schweiz zusammenbringt. In diesem Sinn weiterhin viel Erfolg!"
+    },
+    {
+      "self_ref": "#/texts/50",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "text",
+      "prov": [
+        {
+          "page_no": 1,
+          "bbox": {
+            "l": 1164.4730483,
+            "t": 220.25099649999993,
+            "r": 1223.8162782999998,
+            "b": 213.85299650000002,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            14
+          ]
+        }
+      ],
+      "orig": "D\u00c9SIR\u00c9E POMPER",
+      "text": "D\u00c9SIR\u00c9E POMPER"
+    },
+    {
+      "self_ref": "#/texts/51",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "text",
+      "prov": [
+        {
+          "page_no": 1,
+          "bbox": {
+            "l": 690.2367,
+            "t": 169.97900000000004,
+            "r": 783.4345400000001,
+            "b": 62.42203000000006,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            218
+          ]
+        }
+      ],
+      "orig": "\u00abIn unseren Pausen r\u00e4umen wird sehr oft 20 Minuten gelesen pr\u00fcfen wir gerade, o den QR-Code f\u00fcr die lineausgabe an den W\u00e4nden aufh\u00e4ngen sollen, damit alle Mitarbeitenden Zugang haben\u00bb. Anna Hug, nft . Hier ob wir e Onn",
+      "text": "\u00abIn unseren Pausen r\u00e4umen wird sehr oft 20 Minuten gelesen pr\u00fcfen wir gerade, o den QR-Code f\u00fcr die lineausgabe an den W\u00e4nden aufh\u00e4ngen sollen, damit alle Mitarbeitenden Zugang haben\u00bb. Anna Hug, nft . Hier ob wir e Onn"
+    },
+    {
+      "self_ref": "#/texts/52",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "text",
+      "prov": [
+        {
+          "page_no": 1,
+          "bbox": {
+            "l": 690.23671,
+            "t": 59.38453000000004,
+            "r": 757.96847,
+            "b": 42.42703000000006,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            27
+          ]
+        }
+      ],
+      "orig": "Co-Gesch\u00e4ftsleiterin Hug AG",
+      "text": "Co-Gesch\u00e4ftsleiterin Hug AG"
+    },
+    {
+      "self_ref": "#/texts/53",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "text",
+      "prov": [
+        {
+          "page_no": 1,
+          "bbox": {
+            "l": 888.6618700000001,
+            "t": 170.35903000000008,
+            "r": 988.05091,
+            "b": 42.42456000000004,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            266
+          ]
+        }
+      ],
+      "orig": "\u00abEin pers\u00f6nlicher Moment mit 20 Minuten bleibt mir ganz besonde in Erinnerung: Diesen Sommer war ich zu Gas bei Chefredaktorin D\u00e9si Pomper imLive-Talk, mitten in der Gem\u00fcse- und Fr\u00fcchteabteilung unserer Filiale am Limmatplatz.\u00bb Mario Irminger, Migros-CEO ers st ir\u00e9e",
+      "text": "\u00abEin pers\u00f6nlicher Moment mit 20 Minuten bleibt mir ganz besonde in Erinnerung: Diesen Sommer war ich zu Gas bei Chefredaktorin D\u00e9si Pomper imLive-Talk, mitten in der Gem\u00fcse- und Fr\u00fcchteabteilung unserer Filiale am Limmatplatz.\u00bb Mario Irminger, Migros-CEO ers st ir\u00e9e"
+    },
+    {
+      "self_ref": "#/texts/54",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "text",
+      "prov": [
+        {
+          "page_no": 1,
+          "bbox": {
+            "l": 1087.0870800000002,
+            "t": 170.35900000000004,
+            "r": 1208.14562,
+            "b": 43.85952999999995,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            319
+          ]
+        }
+      ],
+      "orig": "\u00abFr\u00fcher habe ich au weg insGymi imme die blaue Box gegriff Vater hat auch die e andere Zeitungsaus wahrt, bei der Mujin auf der Titelseite wa Etwa nach meinem WM-Titel vor drei Monaten in Tokio.\u00bb Ditaji Kambundji, LeichtathletikWeltmeisterin uf dem Schuler wieder in ffen. Mein eine oder sgabe aufbenga oder ich aren. m",
+      "text": "\u00abFr\u00fcher habe ich au weg insGymi imme die blaue Box gegriff Vater hat auch die e andere Zeitungsaus wahrt, bei der Mujin auf der Titelseite wa Etwa nach meinem WM-Titel vor drei Monaten in Tokio.\u00bb Ditaji Kambundji, LeichtathletikWeltmeisterin uf dem Schuler wieder in ffen. Mein eine oder sgabe aufbenga oder ich aren. m"
+    }
+  ],
+  "pictures": [
+    {
+      "self_ref": "#/pictures/0",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [
+        {
+          "$ref": "#/texts/11"
+        }
+      ],
+      "content_layer": "body",
+      "label": "picture",
+      "prov": [
+        {
+          "page_no": 1,
+          "bbox": {
+            "l": 27.11449062950626,
+            "t": 399.3643649151418,
+            "r": 237.2293359994947,
+            "b": 233.78725808274737,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            0
+          ]
+        }
+      ],
+      "captions": [
+        {
+          "$ref": "#/texts/11"
+        }
+      ],
+      "references": [],
+      "footnotes": [],
+      "annotations": []
+    },
+    {
+      "self_ref": "#/pictures/1",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [
+        {
+          "$ref": "#/texts/13"
+        },
+        {
+          "$ref": "#/texts/14"
+        }
+      ],
+      "content_layer": "body",
+      "label": "picture",
+      "prov": [
+        {
+          "page_no": 1,
+          "bbox": {
+            "l": 255.7410137845841,
+            "t": 729.0904809623925,
+            "r": 623.6455176311096,
+            "b": 453.5012014565384,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            0
+          ]
+        }
+      ],
+      "captions": [],
+      "references": [],
+      "footnotes": [],
+      "annotations": []
+    },
+    {
+      "self_ref": "#/pictures/2",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "picture",
+      "prov": [
+        {
+          "page_no": 1,
+          "bbox": {
+            "l": 123.3812641712727,
+            "t": 178.60044954795262,
+            "r": 235.0679397467163,
+            "b": 33.53860002937722,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            0
+          ]
+        }
+      ],
+      "captions": [],
+      "references": [],
+      "footnotes": [],
+      "annotations": []
+    },
+    {
+      "self_ref": "#/pictures/3",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "picture",
+      "prov": [
+        {
+          "page_no": 1,
+          "bbox": {
+            "l": 346.72844774314086,
+            "t": 175.0226158503209,
+            "r": 415.7995959023786,
+            "b": 34.133513001994515,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            0
+          ]
+        }
+      ],
+      "captions": [],
+      "references": [],
+      "footnotes": [],
+      "annotations": []
+    },
+    {
+      "self_ref": "#/pictures/4",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "picture",
+      "prov": [
+        {
+          "page_no": 1,
+          "bbox": {
+            "l": 516.1202347648012,
+            "t": 181.5013364460068,
+            "r": 623.2085877227784,
+            "b": 33.66271812444347,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            0
+          ]
+        }
+      ],
+      "captions": [],
+      "references": [],
+      "footnotes": [],
+      "annotations": []
+    },
+    {
+      "self_ref": "#/pictures/5",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [
+        {
+          "$ref": "#/texts/30"
+        }
+      ],
+      "content_layer": "body",
+      "label": "picture",
+      "prov": [
+        {
+          "page_no": 1,
+          "bbox": {
+            "l": 679.0081196099966,
+            "t": 729.3340665359408,
+            "r": 1275.5572693766028,
+            "b": 563.8603634949089,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            0
+          ]
+        }
+      ],
+      "captions": [
+        {
+          "$ref": "#/texts/30"
+        }
+      ],
+      "references": [],
+      "footnotes": [],
+      "annotations": []
+    },
+    {
+      "self_ref": "#/pictures/6",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [
+        {
+          "$ref": "#/texts/43"
+        }
+      ],
+      "content_layer": "body",
+      "label": "picture",
+      "prov": [
+        {
+          "page_no": 1,
+          "bbox": {
+            "l": 921.0121766998666,
+            "t": 409.1513359258094,
+            "r": 1154.3544141989867,
+            "b": 293.55356688778943,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            0
+          ]
+        }
+      ],
+      "captions": [
+        {
+          "$ref": "#/texts/43"
+        }
+      ],
+      "references": [],
+      "footnotes": [],
+      "annotations": []
+    },
+    {
+      "self_ref": "#/pictures/7",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "picture",
+      "prov": [
+        {
+          "page_no": 1,
+          "bbox": {
+            "l": 763.3939997852536,
+            "t": 176.82955574439086,
+            "r": 873.323648308596,
+            "b": 33.71974535731181,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            0
+          ]
+        }
+      ],
+      "captions": [],
+      "references": [],
+      "footnotes": [],
+      "annotations": []
+    },
+    {
+      "self_ref": "#/pictures/8",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "picture",
+      "prov": [
+        {
+          "page_no": 1,
+          "bbox": {
+            "l": 972.729016969833,
+            "t": 177.53614450672126,
+            "r": 1076.2835413732237,
+            "b": 33.563850590240804,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            0
+          ]
+        }
+      ],
+      "captions": [],
+      "references": [],
+      "footnotes": [],
+      "annotations": []
+    },
+    {
+      "self_ref": "#/pictures/9",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "picture",
+      "prov": [
+        {
+          "page_no": 1,
+          "bbox": {
+            "l": 1169.834879301481,
+            "t": 178.69559658888784,
+            "r": 1275.317656746332,
+            "b": 34.274525795996055,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            0
+          ]
+        }
+      ],
+      "captions": [],
+      "references": [],
+      "footnotes": [],
+      "annotations": []
+    }
+  ],
+  "tables": [],
+  "key_value_items": [],
+  "form_items": [],
+  "pages": {
+    "1": {
+      "size": {
+        "width": 1303.938,
+        "height": 850.394
+      },
+      "page_no": 1
+    }
+  }
+}

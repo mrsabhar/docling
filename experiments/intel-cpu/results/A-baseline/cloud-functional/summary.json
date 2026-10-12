@@ -1,0 +1,776 @@
+{
+  "documents": [
+    {
+      "doc_id": "2203.01017v2",
+      "ocr": "off",
+      "pages": 16,
+      "status": [
+        "success"
+      ],
+      "cold_total_s": 37.15244900099992,
+      "cold_import_s": 3.703438344999995,
+      "cold_init_pipeline_s": 5.302163124999993,
+      "cold_first_convert_s": 28.14649811300012,
+      "warm_runs": 5,
+      "warm_median_s": 24.00487341400003,
+      "warm_p95_s": 25.267961337599854,
+      "warm_min_s": 23.4862300719999,
+      "warm_max_s": 25.55573126599984,
+      "pages_per_s": 0.6665313215385897,
+      "rss_peak_cold_mib": 2630.46484375,
+      "rss_peak_warm_mib": 3301.19140625,
+      "rss_peak_os_mib": 3301.8125,
+      "pipeline_total_s": 23.984984581000163,
+      "stages_s": {
+        "parse": 0.8588701350001884,
+        "layout": 22.36005765100026,
+        "layout_postprocess": 0.161285031000034,
+        "ocr": 0.0,
+        "table": 21.718089408000196,
+        "page_assemble": 0.0062020610007493815,
+        "reading_order": 0.10323742500008848,
+        "doc_assemble": 0.10402103499995974
+      },
+      "stage_sum_s": 45.20852532100139,
+      "num_threads": 4,
+      "torch_threads": {
+        "intra_op": 4,
+        "inter_op": 4
+      },
+      "thread_env": {}
+    },
+    {
+      "doc_id": "2206.01062",
+      "ocr": "off",
+      "pages": 9,
+      "status": [
+        "success"
+      ],
+      "cold_total_s": 38.970097180999915,
+      "cold_import_s": 3.998546191999935,
+      "cold_init_pipeline_s": 5.95970910799997,
+      "cold_first_convert_s": 29.011453983000024,
+      "warm_runs": 5,
+      "warm_median_s": 30.726036973000078,
+      "warm_p95_s": 33.364157096600096,
+      "warm_min_s": 29.654657018999956,
+      "warm_max_s": 33.3884624530001,
+      "pages_per_s": 0.29291118825081736,
+      "rss_peak_cold_mib": 2283.71484375,
+      "rss_peak_warm_mib": 2764.58984375,
+      "rss_peak_os_mib": 2765.58203125,
+      "pipeline_total_s": 30.705776726000067,
+      "stages_s": {
+        "parse": 0.5999342630001365,
+        "layout": 12.809718664999878,
+        "layout_postprocess": 0.13979832699988037,
+        "ocr": 0.0,
+        "table": 24.64174672799993,
+        "page_assemble": 0.0046838359997991574,
+        "reading_order": 0.059862432000045374,
+        "doc_assemble": 0.060528382000029524
+      },
+      "stage_sum_s": 38.25641020099965,
+      "num_threads": 4,
+      "torch_threads": {
+        "intra_op": 4,
+        "inter_op": 4
+      },
+      "thread_env": {}
+    },
+    {
+      "doc_id": "multi_page",
+      "ocr": "off",
+      "pages": 5,
+      "status": [
+        "success"
+      ],
+      "cold_total_s": 13.996140706000006,
+      "cold_import_s": 3.566099667000003,
+      "cold_init_pipeline_s": 5.552944398000022,
+      "cold_first_convert_s": 4.876738308999961,
+      "warm_runs": 5,
+      "warm_median_s": 4.593431670000086,
+      "warm_p95_s": 6.280082440400065,
+      "warm_min_s": 3.7356401029999233,
+      "warm_max_s": 6.515451917000064,
+      "pages_per_s": 1.088510803949742,
+      "rss_peak_cold_mib": 1897.375,
+      "rss_peak_warm_mib": 2355.26171875,
+      "rss_peak_os_mib": 2355.5078125,
+      "pipeline_total_s": 4.578266811000049,
+      "stages_s": {
+        "parse": 0.045675436999999874,
+        "layout": 4.487391123000066,
+        "layout_postprocess": 0.018531238000036865,
+        "ocr": 0.0,
+        "table": 0.0001867109999693639,
+        "page_assemble": 0.000735478000024159,
+        "reading_order": 0.02406415499990544,
+        "doc_assemble": 0.024729090000050746
+      },
+      "stage_sum_s": 4.577249077000147,
+      "num_threads": 4,
+      "torch_threads": {
+        "intra_op": 4,
+        "inter_op": 4
+      },
+      "thread_env": {}
+    },
+    {
+      "doc_id": "nemotron_multipage",
+      "ocr": "off",
+      "pages": 4,
+      "status": [
+        "success"
+      ],
+      "cold_total_s": 19.38920053300012,
+      "cold_import_s": 3.762871941999947,
+      "cold_init_pipeline_s": 7.317185412000072,
+      "cold_first_convert_s": 8.308895229999962,
+      "warm_runs": 5,
+      "warm_median_s": 8.508697524000127,
+      "warm_p95_s": 8.77143490680005,
+      "warm_min_s": 7.828500766000161,
+      "warm_max_s": 8.812732133000054,
+      "pages_per_s": 0.4701072036839208,
+      "rss_peak_cold_mib": 1994.21484375,
+      "rss_peak_warm_mib": 2378.01171875,
+      "rss_peak_os_mib": 2377.75390625,
+      "pipeline_total_s": 8.489171444000021,
+      "stages_s": {
+        "parse": 0.01420992999965165,
+        "layout": 7.452943424000068,
+        "layout_postprocess": 0.009117224000192437,
+        "ocr": 0.0,
+        "table": 8.366500014744815e-05,
+        "page_assemble": 7.64639999033534e-05,
+        "reading_order": 0.0003666340001018398,
+        "doc_assemble": 0.0008378049999464565
+      },
+      "stage_sum_s": 7.47726851199991,
+      "num_threads": 4,
+      "torch_threads": {
+        "intra_op": 4,
+        "inter_op": 4
+      },
+      "thread_env": {}
+    },
+    {
+      "doc_id": "newspaper-00",
+      "ocr": "off",
+      "pages": 1,
+      "status": [
+        "success"
+      ],
+      "cold_total_s": 12.185315490999983,
+      "cold_import_s": 3.700853656999925,
+      "cold_init_pipeline_s": 6.398860740999908,
+      "cold_first_convert_s": 2.0775990269999056,
+      "warm_runs": 5,
+      "warm_median_s": 1.8239573400001063,
+      "warm_p95_s": 2.165282780600046,
+      "warm_min_s": 1.6787987659999999,
+      "warm_max_s": 2.2174916080000457,
+      "pages_per_s": 0.5482584367899426,
+      "rss_peak_cold_mib": 1463.4609375,
+      "rss_peak_warm_mib": 1748.546875,
+      "rss_peak_os_mib": 1748.3359375,
+      "pipeline_total_s": 1.8118539090000922,
+      "stages_s": {
+        "parse": 0.03740160300003481,
+        "layout": 1.5010947779999242,
+        "layout_postprocess": 0.019814049999922645,
+        "ocr": 0.0,
+        "table": 4.305099992052419e-05,
+        "page_assemble": 0.0008562670000173966,
+        "reading_order": 0.02858560699996815,
+        "doc_assemble": 0.029188969999950132
+      },
+      "stage_sum_s": 1.5883987189997697,
+      "num_threads": 4,
+      "torch_threads": {
+        "intra_op": 4,
+        "inter_op": 4
+      },
+      "thread_env": {}
+    },
+    {
+      "doc_id": "normal_4pages",
+      "ocr": "off",
+      "pages": 4,
+      "status": [
+        "success"
+      ],
+      "cold_total_s": 13.795708149999996,
+      "cold_import_s": 3.4225977549999698,
+      "cold_init_pipeline_s": 5.011368665999953,
+      "cold_first_convert_s": 5.3613617350000595,
+      "warm_runs": 5,
+      "warm_median_s": 4.823026428999924,
+      "warm_p95_s": 5.709671547199923,
+      "warm_min_s": 4.66137867000009,
+      "warm_max_s": 5.911091143999897,
+      "pages_per_s": 0.829354775240039,
+      "rss_peak_cold_mib": 1897.54296875,
+      "rss_peak_warm_mib": 2196.79296875,
+      "rss_peak_os_mib": 2201.3984375,
+      "pipeline_total_s": 4.812177618999954,
+      "stages_s": {
+        "parse": 0.05547803700005716,
+        "layout": 3.6312114560000737,
+        "layout_postprocess": 0.031351825000001554,
+        "ocr": 0.0,
+        "table": 0.9572211360000438,
+        "page_assemble": 0.0012423929998703898,
+        "reading_order": 0.038914011999963805,
+        "doc_assemble": 0.03950673600002119
+      },
+      "stage_sum_s": 4.716011583000068,
+      "num_threads": 4,
+      "torch_threads": {
+        "intra_op": 4,
+        "inter_op": 4
+      },
+      "thread_env": {}
+    },
+    {
+      "doc_id": "ocr_test",
+      "ocr": "off",
+      "pages": 1,
+      "status": [
+        "success"
+      ],
+      "cold_total_s": 13.421915947999878,
+      "cold_import_s": 3.7224518640000497,
+      "cold_init_pipeline_s": 7.390542742999969,
+      "cold_first_convert_s": 2.3083656700000574,
+      "warm_runs": 5,
+      "warm_median_s": 1.9211385450000762,
+      "warm_p95_s": 2.014049240199847,
+      "warm_min_s": 1.8204316429998926,
+      "warm_max_s": 2.034915250999802,
+      "pages_per_s": 0.5205246662728119,
+      "rss_peak_cold_mib": 1483.98046875,
+      "rss_peak_warm_mib": 1694.890625,
+      "rss_peak_os_mib": 1694.71875,
+      "pipeline_total_s": 1.912139285999956,
+      "stages_s": {
+        "parse": 0.0027924169999096193,
+        "layout": 1.2721992799999953,
+        "layout_postprocess": 0.0006053340000562457,
+        "ocr": 0.0,
+        "table": 2.0125999981246423e-05,
+        "page_assemble": 1.260899989574682e-05,
+        "reading_order": 0.000345980000020063,
+        "doc_assemble": 0.0008308600001782906
+      },
+      "stage_sum_s": 1.2764606260000164,
+      "num_threads": 4,
+      "torch_threads": {
+        "intra_op": 4,
+        "inter_op": 4
+      },
+      "thread_env": {}
+    },
+    {
+      "doc_id": "redp5110_sampled",
+      "ocr": "off",
+      "pages": 18,
+      "status": [
+        "success"
+      ],
+      "cold_total_s": 39.91266649999989,
+      "cold_import_s": 4.081531251999877,
+      "cold_init_pipeline_s": 5.996071341000061,
+      "cold_first_convert_s": 29.83448644400005,
+      "warm_runs": 5,
+      "warm_median_s": 37.77616188100001,
+      "warm_p95_s": 46.151120626799866,
+      "warm_min_s": 32.944003247999945,
+      "warm_max_s": 46.960916548999876,
+      "pages_per_s": 0.4764909695352964,
+      "rss_peak_cold_mib": 2252.046875,
+      "rss_peak_warm_mib": 2869.57421875,
+      "rss_peak_os_mib": 2870.953125,
+      "pipeline_total_s": 37.7590061479998,
+      "stages_s": {
+        "parse": 0.28249114799950803,
+        "layout": 28.20505559299977,
+        "layout_postprocess": 0.1145531779995963,
+        "ocr": 0.0,
+        "table": 32.21524299399994,
+        "page_assemble": 0.002936826999984987,
+        "reading_order": 0.07907893100014007,
+        "doc_assemble": 0.08009731900006045
+      },
+      "stage_sum_s": 60.900377058998856,
+      "num_threads": 4,
+      "torch_threads": {
+        "intra_op": 4,
+        "inter_op": 4
+      },
+      "thread_env": {}
+    },
+    {
+      "doc_id": "table_misidentified_as_form",
+      "ocr": "off",
+      "pages": 1,
+      "status": [
+        "success"
+      ],
+      "cold_total_s": 17.068823501999987,
+      "cold_import_s": 3.8860746420000396,
+      "cold_init_pipeline_s": 7.181120698000086,
+      "cold_first_convert_s": 6.001332361000095,
+      "warm_runs": 5,
+      "warm_median_s": 6.406985422999924,
+      "warm_p95_s": 7.340003148599953,
+      "warm_min_s": 6.110018132999812,
+      "warm_max_s": 7.346796507999898,
+      "pages_per_s": 0.15607964338582386,
+      "rss_peak_cold_mib": 1457.0703125,
+      "rss_peak_warm_mib": 1709.71484375,
+      "rss_peak_os_mib": 1709.625,
+      "pipeline_total_s": 6.394769303999965,
+      "stages_s": {
+        "parse": 0.012324829999897702,
+        "layout": 1.5099134810000123,
+        "layout_postprocess": 0.012881264000043302,
+        "ocr": 0.0,
+        "table": 4.668056231000037,
+        "page_assemble": 0.0005486720001499634,
+        "reading_order": 0.02945714199995564,
+        "doc_assemble": 0.030156980000128897
+      },
+      "stage_sum_s": 6.233881458000269,
+      "num_threads": 4,
+      "torch_threads": {
+        "intra_op": 4,
+        "inter_op": 4
+      },
+      "thread_env": {}
+    },
+    {
+      "doc_id": "2203.01017v2",
+      "ocr": "on",
+      "pages": 16,
+      "status": [
+        "success"
+      ],
+      "cold_total_s": 158.2642176170002,
+      "cold_import_s": 4.339471727000273,
+      "cold_init_pipeline_s": 6.900396955999895,
+      "cold_first_convert_s": 147.0240986890003,
+      "warm_runs": 5,
+      "warm_median_s": 151.53506096599995,
+      "warm_p95_s": 153.73159775259964,
+      "warm_min_s": 127.55204814799981,
+      "warm_max_s": 154.27960995999956,
+      "pages_per_s": 0.10558612573224842,
+      "rss_peak_cold_mib": 2892.09765625,
+      "rss_peak_warm_mib": 3993.859375,
+      "rss_peak_os_mib": 3993.48828125,
+      "pipeline_total_s": 151.51280059500004,
+      "stages_s": {
+        "parse": 1.2432325340000716,
+        "layout": 46.38309294099963,
+        "layout_postprocess": 0.4154822929999682,
+        "ocr": 135.53029454899934,
+        "table": 35.99703772399971,
+        "page_assemble": 0.0054662929996993626,
+        "reading_order": 0.1636724919999324,
+        "doc_assemble": 0.16480982799976118
+      },
+      "stage_sum_s": 219.73941616199818,
+      "num_threads": 4,
+      "torch_threads": {
+        "intra_op": 4,
+        "inter_op": 4
+      },
+      "thread_env": {}
+    },
+    {
+      "doc_id": "2206.01062",
+      "ocr": "on",
+      "pages": 9,
+      "status": [
+        "success"
+      ],
+      "cold_total_s": 83.89137449500004,
+      "cold_import_s": 3.749902348999967,
+      "cold_init_pipeline_s": 7.609012757000073,
+      "cold_first_convert_s": 72.53209658600008,
+      "warm_runs": 5,
+      "warm_median_s": 59.2804561199996,
+      "warm_p95_s": 68.63625747019968,
+      "warm_min_s": 52.22292285399999,
+      "warm_max_s": 70.87734928199961,
+      "pages_per_s": 0.15182069418935606,
+      "rss_peak_cold_mib": 2404.6171875,
+      "rss_peak_warm_mib": 3075.97265625,
+      "rss_peak_os_mib": 3079.92578125,
+      "pipeline_total_s": 59.259958950000055,
+      "stages_s": {
+        "parse": 0.7782628479999403,
+        "layout": 23.35790850999956,
+        "layout_postprocess": 0.17364164100081325,
+        "ocr": 24.43657584099992,
+        "table": 52.113504019000175,
+        "page_assemble": 0.004328256999542646,
+        "reading_order": 0.054703576999600045,
+        "doc_assemble": 0.055454157999974996
+      },
+      "stage_sum_s": 100.91967527399993,
+      "num_threads": 4,
+      "torch_threads": {
+        "intra_op": 4,
+        "inter_op": 4
+      },
+      "thread_env": {}
+    },
+    {
+      "doc_id": "multi_page",
+      "ocr": "on",
+      "pages": 5,
+      "status": [
+        "success"
+      ],
+      "cold_total_s": 21.030668980999963,
+      "cold_import_s": 4.310418539999773,
+      "cold_init_pipeline_s": 7.334902822000004,
+      "cold_first_convert_s": 9.385007700000187,
+      "warm_runs": 5,
+      "warm_median_s": 8.180878867999581,
+      "warm_p95_s": 9.154208372600078,
+      "warm_min_s": 7.6071775580003305,
+      "warm_max_s": 9.211124548000043,
+      "pages_per_s": 0.611181277791321,
+      "rss_peak_cold_mib": 2001.9609375,
+      "rss_peak_warm_mib": 2394.1328125,
+      "rss_peak_os_mib": 2401.671875,
+      "pipeline_total_s": 8.167964262000169,
+      "stages_s": {
+        "parse": 0.07634147000044322,
+        "layout": 8.019387436999295,
+        "layout_postprocess": 0.01567211099973065,
+        "ocr": 0.04467477099933603,
+        "table": 0.00012713399883068632,
+        "page_assemble": 0.0006277779998526967,
+        "reading_order": 0.019114833000003273,
+        "doc_assemble": 0.0196446019999712
+      },
+      "stage_sum_s": 8.17647530299746,
+      "num_threads": 4,
+      "torch_threads": {
+        "intra_op": 4,
+        "inter_op": 4
+      },
+      "thread_env": {}
+    },
+    {
+      "doc_id": "nemotron_multipage",
+      "ocr": "on",
+      "pages": 4,
+      "status": [
+        "success"
+      ],
+      "cold_total_s": 32.790323363000425,
+      "cold_import_s": 3.8320346609998523,
+      "cold_init_pipeline_s": 7.827926654999828,
+      "cold_first_convert_s": 21.130043898000622,
+      "warm_runs": 5,
+      "warm_median_s": 19.631443387999752,
+      "warm_p95_s": 21.474604298999658,
+      "warm_min_s": 18.35887884800013,
+      "warm_max_s": 21.888483320999512,
+      "pages_per_s": 0.20375475816745636,
+      "rss_peak_cold_mib": 2552.0546875,
+      "rss_peak_warm_mib": 3180.09375,
+      "rss_peak_os_mib": 3187.78515625,
+      "pipeline_total_s": 19.620418286999666,
+      "stages_s": {
+        "parse": 0.009714298001199495,
+        "layout": 8.44171176600048,
+        "layout_postprocess": 0.008707814001354564,
+        "ocr": 15.34166860699861,
+        "table": 7.920300049590878e-05,
+        "page_assemble": 0.00020220899932610337,
+        "reading_order": 0.0022090160000516335,
+        "doc_assemble": 0.002584710000519408
+      },
+      "stage_sum_s": 23.804668607001986,
+      "num_threads": 4,
+      "torch_threads": {
+        "intra_op": 4,
+        "inter_op": 4
+      },
+      "thread_env": {}
+    },
+    {
+      "doc_id": "newspaper-00",
+      "ocr": "on",
+      "pages": 1,
+      "status": [
+        "success"
+      ],
+      "cold_total_s": 29.080421899000612,
+      "cold_import_s": 3.698045645000093,
+      "cold_init_pipeline_s": 7.907202412000515,
+      "cold_first_convert_s": 17.474986603000616,
+      "warm_runs": 5,
+      "warm_median_s": 16.52472527699956,
+      "warm_p95_s": 16.63567903059975,
+      "warm_min_s": 16.05434157000036,
+      "warm_max_s": 16.660924042999795,
+      "pages_per_s": 0.060515378212785194,
+      "rss_peak_cold_mib": 1947.5546875,
+      "rss_peak_warm_mib": 2331.26953125,
+      "rss_peak_os_mib": 2331.14453125,
+      "pipeline_total_s": 16.511665025000184,
+      "stages_s": {
+        "parse": 0.035078521000286855,
+        "layout": 1.3895686900004875,
+        "layout_postprocess": 0.022286491000159003,
+        "ocr": 14.71822437100036,
+        "table": 2.8348000341793522e-05,
+        "page_assemble": 0.000932543000089936,
+        "reading_order": 0.032148381999832054,
+        "doc_assemble": 0.03324406600040675
+      },
+      "stage_sum_s": 16.199363030002132,
+      "num_threads": 4,
+      "torch_threads": {
+        "intra_op": 4,
+        "inter_op": 4
+      },
+      "thread_env": {}
+    },
+    {
+      "doc_id": "normal_4pages",
+      "ocr": "on",
+      "pages": 4,
+      "status": [
+        "success"
+      ],
+      "cold_total_s": 42.3034112429998,
+      "cold_import_s": 3.7724031679999825,
+      "cold_init_pipeline_s": 7.2411106839999775,
+      "cold_first_convert_s": 31.289676527999973,
+      "warm_runs": 5,
+      "warm_median_s": 27.763706877999994,
+      "warm_p95_s": 28.205990237200194,
+      "warm_min_s": 25.57130468100013,
+      "warm_max_s": 28.221070926000266,
+      "pages_per_s": 0.1440729805129014,
+      "rss_peak_cold_mib": 2284.98828125,
+      "rss_peak_warm_mib": 2947.1640625,
+      "rss_peak_os_mib": 2946.7890625,
+      "pipeline_total_s": 27.748848905999694,
+      "stages_s": {
+        "parse": 0.09656481499973779,
+        "layout": 9.556520294999928,
+        "layout_postprocess": 0.04500044600013098,
+        "ocr": 20.942516550000164,
+        "table": 2.1923170100001244,
+        "page_assemble": 0.0010826630002611637,
+        "reading_order": 0.05902227900014623,
+        "doc_assemble": 0.059895059999917066
+      },
+      "stage_sum_s": 32.89389683900026,
+      "num_threads": 4,
+      "torch_threads": {
+        "intra_op": 4,
+        "inter_op": 4
+      },
+      "thread_env": {}
+    },
+    {
+      "doc_id": "ocr_test",
+      "ocr": "on",
+      "pages": 1,
+      "status": [
+        "success"
+      ],
+      "cold_total_s": 16.664102214000195,
+      "cold_import_s": 3.574868580000839,
+      "cold_init_pipeline_s": 7.435921823999706,
+      "cold_first_convert_s": 5.653080967000278,
+      "warm_runs": 5,
+      "warm_median_s": 5.13186972099993,
+      "warm_p95_s": 5.57967041580032,
+      "warm_min_s": 5.026417822999974,
+      "warm_max_s": 5.591428026000358,
+      "pages_per_s": 0.19486075336401035,
+      "rss_peak_cold_mib": 2049.6015625,
+      "rss_peak_warm_mib": 2559.6796875,
+      "rss_peak_os_mib": 2559.45703125,
+      "pipeline_total_s": 5.103874671000085,
+      "stages_s": {
+        "parse": 0.00222249800026475,
+        "layout": 1.4910335260001375,
+        "layout_postprocess": 0.0007592199999635341,
+        "ocr": 3.193074240999522,
+        "table": 2.3276000320038293e-05,
+        "page_assemble": 4.9573000069358386e-05,
+        "reading_order": 0.0005044990002716077,
+        "doc_assemble": 0.000875298000210023
+      },
+      "stage_sum_s": 4.688037632000487,
+      "num_threads": 4,
+      "torch_threads": {
+        "intra_op": 4,
+        "inter_op": 4
+      },
+      "thread_env": {}
+    },
+    {
+      "doc_id": "redp5110_sampled",
+      "ocr": "on",
+      "pages": 18,
+      "status": [
+        "success"
+      ],
+      "cold_total_s": 93.04634148800005,
+      "cold_import_s": 4.173007742000209,
+      "cold_init_pipeline_s": 6.422735569999986,
+      "cold_first_convert_s": 82.45035192599971,
+      "warm_runs": 5,
+      "warm_median_s": 81.5978829630003,
+      "warm_p95_s": 88.56502753759996,
+      "warm_min_s": 79.07028318799985,
+      "warm_max_s": 90.30050897899991,
+      "pages_per_s": 0.22059395840161575,
+      "rss_peak_cold_mib": 2797.015625,
+      "rss_peak_warm_mib": 3652.0,
+      "rss_peak_os_mib": 3651.94140625,
+      "pipeline_total_s": 81.5782747609992,
+      "stages_s": {
+        "parse": 0.5915320449998944,
+        "layout": 54.17791505899959,
+        "layout_postprocess": 0.10927380500015715,
+        "ocr": 64.7825693560003,
+        "table": 49.986959408000985,
+        "page_assemble": 0.0027755240007536486,
+        "reading_order": 0.08591289900004995,
+        "doc_assemble": 0.0869347990001188
+      },
+      "stage_sum_s": 169.7379599960018,
+      "num_threads": 4,
+      "torch_threads": {
+        "intra_op": 4,
+        "inter_op": 4
+      },
+      "thread_env": {}
+    },
+    {
+      "doc_id": "table_misidentified_as_form",
+      "ocr": "on",
+      "pages": 1,
+      "status": [
+        "success"
+      ],
+      "cold_total_s": 27.911866611999358,
+      "cold_import_s": 4.202046059999702,
+      "cold_init_pipeline_s": 7.696500045999528,
+      "cold_first_convert_s": 16.013116654999976,
+      "warm_runs": 5,
+      "warm_median_s": 15.075643101000423,
+      "warm_p95_s": 16.003165223799623,
+      "warm_min_s": 14.379854097000134,
+      "warm_max_s": 16.006330579999485,
+      "pages_per_s": 0.06633216197149426,
+      "rss_peak_cold_mib": 2026.0546875,
+      "rss_peak_warm_mib": 2360.58203125,
+      "rss_peak_os_mib": 2373.9765625,
+      "pipeline_total_s": 15.058451469999454,
+      "stages_s": {
+        "parse": 0.010402128999885463,
+        "layout": 1.4040127430007487,
+        "layout_postprocess": 0.01587408300019888,
+        "ocr": 8.512196376999782,
+        "table": 5.035659526000018,
+        "page_assemble": 0.0005005539997000596,
+        "reading_order": 0.025085553000280925,
+        "doc_assemble": 0.025657930999841483
+      },
+      "stage_sum_s": 15.004303343000174,
+      "num_threads": 4,
+      "torch_threads": {
+        "intra_op": 4,
+        "inter_op": 4
+      },
+      "thread_env": {}
+    }
+  ],
+  "corpus": {
+    "off": {
+      "documents": 9,
+      "pages": 59,
+      "sum_warm_median_s": 120.58430919900036,
+      "corpus_pages_per_s": 0.48928422273110395,
+      "stage_totals_s": {
+        "parse": 1.9091777999993838,
+        "layout": 83.22958545100005,
+        "layout_postprocess": 0.5079374709997637,
+        "ocr": 0.0,
+        "table": 84.20069005000016,
+        "page_assemble": 0.017294607000394535,
+        "reading_order": 0.36391231800018886,
+        "doc_assemble": 0.36989717700032543
+      },
+      "stage_share": {
+        "table": 0.4946156579101761,
+        "layout": 0.488911149552242,
+        "parse": 0.011214982122515229,
+        "layout_postprocess": 0.002983750207350927,
+        "doc_assemble": 0.002172867412992567,
+        "page_assemble": 0.0001015927947231599,
+        "ocr": 0.0
+      },
+      "bottleneck_ranking": [
+        "table",
+        "layout",
+        "parse",
+        "layout_postprocess",
+        "doc_assemble",
+        "page_assemble",
+        "ocr"
+      ]
+    },
+    "on": {
+      "documents": 9,
+      "pages": 59,
+      "sum_warm_median_s": 384.7216672819991,
+      "corpus_pages_per_s": 0.15335762193178812,
+      "stage_totals_s": {
+        "parse": 2.843351158001724,
+        "layout": 154.22115096699986,
+        "layout_postprocess": 0.8066979040024762,
+        "ocr": 287.5017946629973,
+        "table": 145.325735648001,
+        "page_assemble": 0.015965393999294974,
+        "reading_order": 0.4423735300001681,
+        "doc_assemble": 0.4491004520007209
+      },
+      "stage_share": {
+        "ocr": 0.4863318703172723,
+        "layout": 0.26087719167172424,
+        "table": 0.24582989788210247,
+        "parse": 0.004809751842629921,
+        "layout_postprocess": 0.0013645928746094233,
+        "doc_assemble": 0.0007596886935535832,
+        "page_assemble": 2.7006718108075176e-05
+      },
+      "bottleneck_ranking": [
+        "ocr",
+        "layout",
+        "table",
+        "parse",
+        "layout_postprocess",
+        "doc_assemble",
+        "page_assemble"
+      ]
+    }
+  }
+}

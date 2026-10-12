@@ -1,0 +1,466 @@
+{
+  "doc_id": "nemotron_multipage",
+  "doc": "tests/data/ocr/sources/nemotron_multipage.pdf",
+  "ocr": "off",
+  "config": {
+    "device": "cpu",
+    "num_threads_arg": null,
+    "num_threads_effective": 4,
+    "ocr_engine": "rapidocr",
+    "ocr_backend": "onnxruntime",
+    "layout_batch_size": 4,
+    "table_batch_size": 4,
+    "ocr_batch_size": 4,
+    "page_batch_size": 4,
+    "warmup": 1,
+    "runs": 5,
+    "rss_method": "psutil RSS sampled every 10.0 ms; OS high-water: ru_maxrss (POSIX) / PeakWorkingSetSize (Windows)"
+  },
+  "thread_env": {
+    "OMP_NUM_THREADS": null,
+    "OMP_PROC_BIND": null,
+    "OMP_PLACES": null,
+    "OMP_WAIT_POLICY": null,
+    "MKL_NUM_THREADS": null,
+    "MKL_DYNAMIC": null,
+    "OPENBLAS_NUM_THREADS": null,
+    "NUMEXPR_NUM_THREADS": null,
+    "KMP_AFFINITY": null,
+    "KMP_BLOCKTIME": null,
+    "KMP_HW_SUBSET": null,
+    "DNNL_MAX_CPU_ISA": null,
+    "ONEDNN_MAX_CPU_ISA": null,
+    "ORT_NUM_THREADS": null,
+    "OV_CPU_THREADS_NUM": null,
+    "TBB_NUM_THREADS": null,
+    "TORCH_NUM_THREADS": null,
+    "DOCLING_NUM_THREADS": null,
+    "DOCLING_DEVICE": null,
+    "DOCLING_PERF_PAGE_BATCH_SIZE": null,
+    "DOCLING_PERF_DOC_BATCH_SIZE": null,
+    "DOCLING_PERF_DOC_BATCH_CONCURRENCY": null,
+    "CUDA_VISIBLE_DEVICES": null
+  },
+  "torch_threads": {
+    "intra_op": 4,
+    "inter_op": 4
+  },
+  "platform": "Linux-6.18.44-fc-v114-x86_64-with-glibc2.39",
+  "pid_cpu_affinity": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "cold": {
+    "wall_s": 8.308895229999962,
+    "status": "success",
+    "pages": 4,
+    "timings": {
+      "pipeline_total": {
+        "total_s": 8.289748766000002,
+        "count": 1,
+        "scope": "document"
+      },
+      "page_parse": {
+        "total_s": 0.02996847800022806,
+        "count": 4,
+        "scope": "page"
+      },
+      "layout": {
+        "total_s": 7.1876763699997355,
+        "count": 2,
+        "scope": "page"
+      },
+      "layout_postprocess": {
+        "total_s": 0.012385540999957811,
+        "count": 4,
+        "scope": "page"
+      },
+      "table_structure": {
+        "total_s": 0.00011653900014607643,
+        "count": 4,
+        "scope": "page"
+      },
+      "page_assemble": {
+        "total_s": 7.840600005692977e-05,
+        "count": 4,
+        "scope": "page"
+      },
+      "doc_assemble": {
+        "total_s": 0.0013492189998487447,
+        "count": 1,
+        "scope": "document"
+      },
+      "reading_order": {
+        "total_s": 0.000445282000100633,
+        "count": 1,
+        "scope": "document"
+      },
+      "doc_enrich": {
+        "total_s": 3.9145000073403935e-05,
+        "count": 1,
+        "scope": "document"
+      }
+    },
+    "rss_peak_bytes": 2091085824,
+    "errors": [],
+    "import_s": 3.762871941999947,
+    "init_pipeline_s": 7.317185412000072,
+    "first_convert_s": 8.308895229999962,
+    "total_s": 19.38920053300012
+  },
+  "warmup": [
+    {
+      "wall_s": 8.687987354000143,
+      "status": "success",
+      "pages": 4,
+      "timings": {
+        "pipeline_total": {
+          "total_s": 8.671083377000059,
+          "count": 1,
+          "scope": "document"
+        },
+        "page_parse": {
+          "total_s": 0.03941415200006304,
+          "count": 4,
+          "scope": "page"
+        },
+        "layout": {
+          "total_s": 7.62611092599991,
+          "count": 2,
+          "scope": "page"
+        },
+        "layout_postprocess": {
+          "total_s": 0.0015644430000065768,
+          "count": 4,
+          "scope": "page"
+        },
+        "table_structure": {
+          "total_s": 6.084500000724802e-05,
+          "count": 4,
+          "scope": "page"
+        },
+        "page_assemble": {
+          "total_s": 6.714799974361085e-05,
+          "count": 4,
+          "scope": "page"
+        },
+        "doc_assemble": {
+          "total_s": 0.0007268399999702524,
+          "count": 1,
+          "scope": "document"
+        },
+        "reading_order": {
+          "total_s": 0.00034285500009900716,
+          "count": 1,
+          "scope": "document"
+        },
+        "doc_enrich": {
+          "total_s": 2.0570000060615712e-05,
+          "count": 1,
+          "scope": "document"
+        }
+      },
+      "rss_peak_bytes": 2270728192,
+      "errors": []
+    }
+  ],
+  "runs": [
+    {
+      "wall_s": 7.828500766000161,
+      "status": "success",
+      "pages": 4,
+      "timings": {
+        "pipeline_total": {
+          "total_s": 7.818732144000023,
+          "count": 1,
+          "scope": "document"
+        },
+        "page_parse": {
+          "total_s": 0.023673357999768996,
+          "count": 4,
+          "scope": "page"
+        },
+        "layout": {
+          "total_s": 6.855045291000124,
+          "count": 2,
+          "scope": "page"
+        },
+        "layout_postprocess": {
+          "total_s": 0.016220341000007465,
+          "count": 4,
+          "scope": "page"
+        },
+        "table_structure": {
+          "total_s": 9.623200003261445e-05,
+          "count": 4,
+          "scope": "page"
+        },
+        "page_assemble": {
+          "total_s": 5.1442000085444306e-05,
+          "count": 4,
+          "scope": "page"
+        },
+        "doc_assemble": {
+          "total_s": 0.0009185750000142434,
+          "count": 1,
+          "scope": "document"
+        },
+        "reading_order": {
+          "total_s": 0.0004600160000336473,
+          "count": 1,
+          "scope": "document"
+        },
+        "doc_enrich": {
+          "total_s": 2.264999989165517e-05,
+          "count": 1,
+          "scope": "document"
+        }
+      },
+      "rss_peak_bytes": 2348396544,
+      "errors": []
+    },
+    {
+      "wall_s": 8.812732133000054,
+      "status": "success",
+      "pages": 4,
+      "timings": {
+        "pipeline_total": {
+          "total_s": 8.80193366200001,
+          "count": 1,
+          "scope": "document"
+        },
+        "page_parse": {
+          "total_s": 0.01149243699978797,
+          "count": 4,
+          "scope": "page"
+        },
+        "layout": {
+          "total_s": 7.670624538999846,
+          "count": 2,
+          "scope": "page"
+        },
+        "layout_postprocess": {
+          "total_s": 0.0033023000000866887,
+          "count": 4,
+          "scope": "page"
+        },
+        "table_structure": {
+          "total_s": 7.542999946963391e-05,
+          "count": 4,
+          "scope": "page"
+        },
+        "page_assemble": {
+          "total_s": 9.425200005352963e-05,
+          "count": 4,
+          "scope": "page"
+        },
+        "doc_assemble": {
+          "total_s": 0.0008378049999464565,
+          "count": 1,
+          "scope": "document"
+        },
+        "reading_order": {
+          "total_s": 0.0003405620000194176,
+          "count": 1,
+          "scope": "document"
+        },
+        "doc_enrich": {
+          "total_s": 3.077200017287396e-05,
+          "count": 1,
+          "scope": "document"
+        }
+      },
+      "rss_peak_bytes": 2329587712,
+      "errors": []
+    },
+    {
+      "wall_s": 8.606246002000034,
+      "status": "success",
+      "pages": 4,
+      "timings": {
+        "pipeline_total": {
+          "total_s": 8.582416684999998,
+          "count": 1,
+          "scope": "document"
+        },
+        "page_parse": {
+          "total_s": 0.026531424999802766,
+          "count": 4,
+          "scope": "page"
+        },
+        "layout": {
+          "total_s": 7.452943424000068,
+          "count": 2,
+          "scope": "page"
+        },
+        "layout_postprocess": {
+          "total_s": 0.0028015010004764918,
+          "count": 4,
+          "scope": "page"
+        },
+        "table_structure": {
+          "total_s": 7.562600035271316e-05,
+          "count": 4,
+          "scope": "page"
+        },
+        "page_assemble": {
+          "total_s": 0.00010339199980080593,
+          "count": 4,
+          "scope": "page"
+        },
+        "doc_assemble": {
+          "total_s": 0.0009137439999449271,
+          "count": 1,
+          "scope": "document"
+        },
+        "reading_order": {
+          "total_s": 0.00043620200017358,
+          "count": 1,
+          "scope": "document"
+        },
+        "doc_enrich": {
+          "total_s": 2.823299996634887e-05,
+          "count": 1,
+          "scope": "document"
+        }
+      },
+      "rss_peak_bytes": 2448900096,
+      "errors": []
+    },
+    {
+      "wall_s": 7.955896273000008,
+      "status": "success",
+      "pages": 4,
+      "timings": {
+        "pipeline_total": {
+          "total_s": 7.942955743000084,
+          "count": 1,
+          "scope": "document"
+        },
+        "page_parse": {
+          "total_s": 0.014151571000184049,
+          "count": 4,
+          "scope": "page"
+        },
+        "layout": {
+          "total_s": 7.233426191999797,
+          "count": 2,
+          "scope": "page"
+        },
+        "layout_postprocess": {
+          "total_s": 0.010442388999763352,
+          "count": 4,
+          "scope": "page"
+        },
+        "table_structure": {
+          "total_s": 0.00010418900001241127,
+          "count": 4,
+          "scope": "page"
+        },
+        "page_assemble": {
+          "total_s": 6.0562999578905874e-05,
+          "count": 4,
+          "scope": "page"
+        },
+        "doc_assemble": {
+          "total_s": 0.0007266350000918465,
+          "count": 1,
+          "scope": "document"
+        },
+        "reading_order": {
+          "total_s": 0.0003666340001018398,
+          "count": 1,
+          "scope": "document"
+        },
+        "doc_enrich": {
+          "total_s": 2.1388000050137634e-05,
+          "count": 1,
+          "scope": "document"
+        }
+      },
+      "rss_peak_bytes": 2377117696,
+      "errors": []
+    },
+    {
+      "wall_s": 8.508697524000127,
+      "status": "success",
+      "pages": 4,
+      "timings": {
+        "pipeline_total": {
+          "total_s": 8.489171444000021,
+          "count": 1,
+          "scope": "document"
+        },
+        "page_parse": {
+          "total_s": 0.01420992999965165,
+          "count": 4,
+          "scope": "page"
+        },
+        "layout": {
+          "total_s": 7.519533065000132,
+          "count": 2,
+          "scope": "page"
+        },
+        "layout_postprocess": {
+          "total_s": 0.009117224000192437,
+          "count": 4,
+          "scope": "page"
+        },
+        "table_structure": {
+          "total_s": 8.366500014744815e-05,
+          "count": 4,
+          "scope": "page"
+        },
+        "page_assemble": {
+          "total_s": 7.64639999033534e-05,
+          "count": 4,
+          "scope": "page"
+        },
+        "doc_assemble": {
+          "total_s": 0.0007201030000487663,
+          "count": 1,
+          "scope": "document"
+        },
+        "reading_order": {
+          "total_s": 0.0003377000000455155,
+          "count": 1,
+          "scope": "document"
+        },
+        "doc_enrich": {
+          "total_s": 4.2063000137204654e-05,
+          "count": 1,
+          "scope": "document"
+        }
+      },
+      "rss_peak_bytes": 2493526016,
+      "errors": []
+    }
+  ],
+  "rss_peak_by_phase_bytes": {
+    "startup": 19853312,
+    "import": 628711424,
+    "init": 1465090048,
+    "cold_convert": 2091085824,
+    "cold_convert:done": 1477632000,
+    "warmup0": 2270728192,
+    "warmup0:done": 1601781760,
+    "run0": 2348396544,
+    "run0:done": 1654329344,
+    "run1": 2329587712,
+    "run1:done": 1717313536,
+    "run2": 2448900096,
+    "run2:done": 1761603584,
+    "run3": 2377117696,
+    "run3:done": 1761624064,
+    "run4": 2493526016,
+    "run4:done": 1795944448
+  },
+  "process_peak_rss_os_bytes": 2493255680,
+  "outputs": {
+    "md": "nemotron_multipage.ocr-off.md",
+    "compact_md": "nemotron_multipage.ocr-off.compact.md",
+    "json": "nemotron_multipage.ocr-off.json"
+  }
+}
