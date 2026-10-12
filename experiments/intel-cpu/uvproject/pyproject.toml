@@ -18,6 +18,8 @@ dependencies = [
   "torch==2.14.1",
   "torchvision==0.29.1",
   "onnxruntime==1.31.0",
+  # Experiments B (layout engine) and C (RapidOCR backend): latest release.
+  "openvino==2026.4.1",
   # Used for RSS sampling and the correctness check against repo ground truth.
   "psutil>=5.9",
   "pytest>=8",

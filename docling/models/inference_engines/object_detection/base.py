@@ -35,6 +35,7 @@ class ObjectDetectionEngineType(str, Enum):
     """Supported inference engine types for object-detection models."""
 
     ONNXRUNTIME = "onnxruntime"
+    OPENVINO = "openvino"
     TRANSFORMERS = "transformers"
     API_KSERVE_V2 = "api_kserve_v2"
 

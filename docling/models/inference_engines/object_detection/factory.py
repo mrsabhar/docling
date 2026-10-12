@@ -69,6 +69,26 @@ def create_object_detection_engine(
             accelerator_options=accelerator_options,
         )
 
+    elif options.engine_type == ObjectDetectionEngineType.OPENVINO:
+        from docling.datamodel.object_detection_engine_options import (
+            OpenVinoObjectDetectionEngineOptions,
+        )
+        from docling.models.inference_engines.object_detection.openvino_engine import (
+            OpenVinoObjectDetectionEngine,
+        )
+
+        if not isinstance(options, OpenVinoObjectDetectionEngineOptions):
+            raise ValueError(
+                f"Expected OpenVinoObjectDetectionEngineOptions, got {type(options)}"
+            )
+
+        return OpenVinoObjectDetectionEngine(
+            options=options,
+            model_config=model_config,
+            artifacts_path=artifacts_path,
+            accelerator_options=accelerator_options,
+        )
+
     elif options.engine_type == ObjectDetectionEngineType.TRANSFORMERS:
         from docling.datamodel.object_detection_engine_options import (
             TransformersObjectDetectionEngineOptions,

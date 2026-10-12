@@ -1,0 +1,69 @@
+"""Granite-Docling on CPU: PyTorch (transformers) vs OpenVINO (optimum-intel).
+
+Usage: python gd_ov_compare.py <pdf> <page_index> <ov_model_dir> <out_json> [threads]
+"""
+
+import json
+import sys
+import time
+from pathlib import Path
+
+import pypdfium2
+import torch
+from transformers import AutoModelForImageTextToText, AutoProcessor
+
+REPO = "ibm-granite/granite-docling-258M"
+PROMPT = "Convert this page to docling."
+MAX_NEW_TOKENS = 8192
+
+pdf_path, page_idx, ov_dir, out_json = sys.argv[1:5]
+threads = int(sys.argv[5]) if len(sys.argv) > 5 else 4
+torch.set_num_threads(threads)
+
+# Same scale as the docling preset (scale=2.0 -> 144 dpi).
+image = pypdfium2.PdfDocument(pdf_path)[int(page_idx)].render(scale=2.0).to_pil()
+image = image.convert("RGB")
+
+processor = AutoProcessor.from_pretrained(REPO)
+messages = [
+    {"role": "user", "content": [{"type": "image"}, {"type": "text", "text": PROMPT}]}
+]
+prompt = processor.apply_chat_template(messages, add_generation_prompt=True)
+inputs = processor(text=prompt, images=[image], return_tensors="pt")
+n_prompt = inputs["input_ids"].shape[1]
+
+
+def run(model, name):
+    t0 = time.perf_counter()
+    with torch.inference_mode():
+        out = model.generate(**inputs, max_new_tokens=MAX_NEW_TOKENS, do_sample=False)
+    dt = time.perf_counter() - t0
+    new = out[0, n_prompt:]
+    text = processor.decode(new, skip_special_tokens=False)
+    print(
+        f"{name}: {dt:.1f}s, {len(new)} tokens, {len(new) / dt:.1f} tok/s", flush=True
+    )
+    return {"seconds": dt, "tokens": len(new), "text": text}
+
+
+results = {"pdf": pdf_path, "page": int(page_idx), "threads": threads}
+
+t0 = time.perf_counter()
+pt_model = AutoModelForImageTextToText.from_pretrained(REPO, dtype=torch.float32)
+pt_model.eval()
+results["pytorch_load_s"] = time.perf_counter() - t0
+results["pytorch"] = run(pt_model, "pytorch")
+del pt_model
+
+from optimum.intel import OVModelForVisualCausalLM  # noqa: E402
+
+t0 = time.perf_counter()
+ov_model = OVModelForVisualCausalLM.from_pretrained(
+    ov_dir, ov_config={"INFERENCE_NUM_THREADS": threads, "PERFORMANCE_HINT": "LATENCY"}
+)
+results["openvino_load_s"] = time.perf_counter() - t0
+results["openvino"] = run(ov_model, "openvino")
+
+results["identical_text"] = results["pytorch"]["text"] == results["openvino"]["text"]
+Path(out_json).write_text(json.dumps(results, indent=2), encoding="utf-8")
+print("identical text:", results["identical_text"])

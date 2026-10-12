@@ -107,6 +107,8 @@ def build_converter(args: argparse.Namespace):
         opts.ocr_options = RapidOcrOptions(backend=args.ocr_backend)
     else:
         opts.ocr_options = OcrAutoOptions()
+    if args.layout_engine != "transformers":
+        opts.layout_options = build_layout_options(args)
     if args.layout_batch_size is not None:
         opts.layout_batch_size = args.layout_batch_size
     if args.table_batch_size is not None:
@@ -117,6 +119,27 @@ def build_converter(args: argparse.Namespace):
         format_options={InputFormat.PDF: PdfFormatOption(pipeline_options=opts)}
     )
     return converter, opts
+
+
+def build_layout_options(args: argparse.Namespace):
+    """Heron layout on the ONNX export, run by ONNX Runtime or OpenVINO."""
+    from docling.datamodel.object_detection_engine_options import (
+        OnnxRuntimeObjectDetectionEngineOptions,
+        OpenVinoObjectDetectionEngineOptions,
+    )
+    from docling.datamodel.pipeline_options import LayoutObjectDetectionOptions
+
+    if args.layout_engine == "onnxruntime":
+        engine_options = OnnxRuntimeObjectDetectionEngineOptions()
+    else:
+        engine_options = OpenVinoObjectDetectionEngineOptions(
+            performance_hint=args.ov_hint,
+            num_streams=args.ov_streams,
+            cache_dir=args.ov_cache_dir,
+        )
+    return LayoutObjectDetectionOptions.from_preset(
+        "layout_heron_default", engine_options=engine_options
+    )
 
 
 def timings_of(conv_res) -> dict[str, dict[str, float]]:
@@ -174,6 +197,21 @@ def main() -> None:
         "--ocr-backend",
         choices=["onnxruntime", "openvino", "torch", "paddle"],
         default="onnxruntime",
+    )
+    parser.add_argument(
+        "--layout-engine",
+        choices=["transformers", "onnxruntime", "openvino"],
+        default="transformers",
+    )
+    parser.add_argument(
+        "--ov-hint",
+        choices=["LATENCY", "THROUGHPUT", "CUMULATIVE_THROUGHPUT"],
+        default="LATENCY",
+        help="OpenVINO PERFORMANCE_HINT (layout engine openvino)",
+    )
+    parser.add_argument("--ov-streams", type=int, help="OpenVINO NUM_STREAMS")
+    parser.add_argument(
+        "--ov-cache-dir", type=Path, help="OpenVINO compiled-model cache folder"
     )
     parser.add_argument("--device", default="cpu")
     parser.add_argument("--num-threads", type=int)
@@ -233,7 +271,17 @@ def main() -> None:
 
     import torch
 
+    runtime_versions: dict[str, str | None] = {}
+    for dist in ("torch", "onnxruntime", "openvino", "rapidocr"):
+        try:
+            from importlib.metadata import version
+
+            runtime_versions[dist] = version(dist)
+        except Exception:
+            runtime_versions[dist] = None
+
     result = {
+        "runtime_versions": runtime_versions,
         "doc_id": args.doc_id,
         "doc": str(args.doc),
         "ocr": args.ocr,
@@ -243,6 +291,10 @@ def main() -> None:
             "num_threads_effective": opts.accelerator_options.num_threads,
             "ocr_engine": args.ocr_engine,
             "ocr_backend": args.ocr_backend if args.ocr_engine == "rapidocr" else None,
+            "layout_engine": args.layout_engine,
+            "ov_hint": args.ov_hint if args.layout_engine == "openvino" else None,
+            "ov_streams": args.ov_streams,
+            "ov_cache_dir": str(args.ov_cache_dir) if args.ov_cache_dir else None,
             "layout_batch_size": opts.layout_batch_size,
             "table_batch_size": opts.table_batch_size,
             "ocr_batch_size": opts.ocr_batch_size,

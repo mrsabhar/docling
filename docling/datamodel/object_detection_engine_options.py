@@ -5,7 +5,8 @@
 
 from __future__ import annotations
 
-from typing import List, Literal
+from pathlib import Path
+from typing import List, Literal, Optional
 
 from pydantic import Field
 
@@ -47,6 +48,44 @@ class OnnxRuntimeObjectDetectionEngineOptions(BaseObjectDetectionEngineOptions):
             "2 (ORT_ENABLE_EXTENDED), 99 (ORT_ENABLE_ALL). "
             "Default enables all optimizations including layout optimizations."
         ),
+    )
+
+
+class OpenVinoObjectDetectionEngineOptions(BaseObjectDetectionEngineOptions):
+    """Runtime configuration for OpenVINO based object-detection models.
+
+    Loads the same ONNX export as the ONNX Runtime engine and compiles it with
+    OpenVINO Runtime. Preprocessing parameters come from HuggingFace
+    preprocessor configs, not from these options.
+    """
+
+    engine_type: Literal[ObjectDetectionEngineType.OPENVINO] = (
+        ObjectDetectionEngineType.OPENVINO
+    )
+
+    model_filename: str = Field(
+        default="model.onnx",
+        description="Filename of the ONNX export inside the model repository",
+    )
+
+    device: str = Field(
+        default="CPU",
+        description="OpenVINO device name passed to compile_model (e.g. 'CPU', 'GPU')",
+    )
+
+    performance_hint: Literal["LATENCY", "THROUGHPUT", "CUMULATIVE_THROUGHPUT"] = Field(
+        default="LATENCY",
+        description="OpenVINO PERFORMANCE_HINT for the compiled model",
+    )
+
+    num_streams: Optional[int] = Field(
+        default=None,
+        description="OpenVINO NUM_STREAMS. None keeps the value derived from the hint.",
+    )
+
+    cache_dir: Optional[Path] = Field(
+        default=None,
+        description="Folder for the OpenVINO compiled-model cache. None disables it.",
     )
 
 

@@ -1,0 +1,24 @@
+# Granite-Docling on OpenVINO (CPU), separate from uvproject/.
+#
+# The optimum-intel 2.2.0 exporter for Idefics3 (Granite-Docling) allows only
+# transformers<=4.57.6, but uvproject/ pins transformers==5.18.0 (upstream
+# lock). So this test has its own environment.
+#
+#   uv sync --frozen --project experiments/intel-cpu/granite-docling-ov
+#
+[project]
+name = "docling-granite-docling-ov"
+version = "0.0.0"
+description = "Granite-Docling-258M: PyTorch vs OpenVINO on CPU"
+requires-python = ">=3.12,<3.13"
+dependencies = [
+  "optimum-intel[openvino]==2.2.0",
+  "openvino==2026.4.1",
+  # Highest version the optimum-intel Idefics3 exporter accepts.
+  "transformers==4.57.6",
+  "torch==2.14.1",
+  "pypdfium2>=4",
+]
+
+[tool.uv]
+package = false
