@@ -59,6 +59,9 @@ def run(model, name):
             **inputs,
             max_new_tokens=MAX_NEW_TOKENS,
             do_sample=False,
+            # The model's generation_config.json sets use_cache=false; Docling
+            # passes use_cache=True (VlmEngineOptions.use_kv_cache), so do the same.
+            use_cache=True,
             stopping_criteria=[progress],
         )
     dt = time.perf_counter() - t0
