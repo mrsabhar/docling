@@ -16,7 +16,7 @@ experiment A.
 | C | OCR on OpenVINO | Plan only |
 | D | CPU threading / concurrency tuning | Plan only |
 | E | oneTBB prototype (optional) | Plan only |
-| G | Granite-Docling (VLM) on OpenVINO, CPU | Test harness in `granite-docling-ov/` |
+| G | Granite-Docling (VLM) on OpenVINO, CPU | First cloud run: ~2-3.5x faster, but output follows transformers 4.57.6, not 5.18.0 ([results](results/G-granite-docling-ov/cloud-functional/README.md)) |
 
 ## Layout
 

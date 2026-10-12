@@ -1,6 +1,9 @@
 """Granite-Docling on CPU: PyTorch (transformers) vs OpenVINO (optimum-intel).
 
-Usage: python gd_ov_compare.py <pdf> <page_index> <ov_model_dir> <out_json> [threads]
+Usage: python compare.py <pdf> <page_index> <ov_model_dir|-> <out_json> [threads]
+
+With "-" as ov_model_dir, only the PyTorch run is done (for example in the
+docling environment uvproject/, which has a newer transformers).
 """
 
 import json
@@ -86,6 +89,13 @@ pt_model.eval()
 results["pytorch_load_s"] = time.perf_counter() - t0
 results["pytorch"] = run(pt_model, "pytorch")
 del pt_model
+
+if ov_dir == "-":
+    import transformers
+
+    results["transformers"] = transformers.__version__
+    Path(out_json).write_text(json.dumps(results, indent=2), encoding="utf-8")
+    sys.exit(0)
 
 from optimum.intel import OVModelForVisualCausalLM  # noqa: E402
 
