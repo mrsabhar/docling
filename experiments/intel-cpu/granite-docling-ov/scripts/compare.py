@@ -10,7 +10,7 @@ from pathlib import Path
 
 import pypdfium2
 import torch
-from transformers import AutoModelForImageTextToText, AutoProcessor
+from transformers import AutoModelForImageTextToText, AutoProcessor, StoppingCriteria
 
 REPO = "ibm-granite/granite-docling-258M"
 PROMPT = "Convert this page to docling."
@@ -31,19 +31,48 @@ messages = [
 prompt = processor.apply_chat_template(messages, add_generation_prompt=True)
 inputs = processor(text=prompt, images=[image], return_tensors="pt")
 n_prompt = inputs["input_ids"].shape[1]
+print(f"prompt tokens: {n_prompt}, image {image.size}", flush=True)
+
+
+class Progress(StoppingCriteria):
+    """Print the generated token count every 100 tokens; never stops generation."""
+
+    def __init__(self, name, t0):
+        self.name, self.t0, self.first = name, t0, None
+
+    def __call__(self, input_ids, scores, **kwargs):
+        n = input_ids.shape[1] - n_prompt
+        if n == 1:
+            self.first = time.perf_counter() - self.t0
+            print(f"{self.name}: first token after {self.first:.1f}s", flush=True)
+        elif n % 100 == 0:
+            dt = time.perf_counter() - self.t0
+            print(f"{self.name}: {n} tokens, {dt:.0f}s", flush=True)
+        return torch.zeros(input_ids.shape[0], dtype=torch.bool)
 
 
 def run(model, name):
     t0 = time.perf_counter()
+    progress = Progress(name, t0)
     with torch.inference_mode():
-        out = model.generate(**inputs, max_new_tokens=MAX_NEW_TOKENS, do_sample=False)
+        out = model.generate(
+            **inputs,
+            max_new_tokens=MAX_NEW_TOKENS,
+            do_sample=False,
+            stopping_criteria=[progress],
+        )
     dt = time.perf_counter() - t0
     new = out[0, n_prompt:]
     text = processor.decode(new, skip_special_tokens=False)
     print(
         f"{name}: {dt:.1f}s, {len(new)} tokens, {len(new) / dt:.1f} tok/s", flush=True
     )
-    return {"seconds": dt, "tokens": len(new), "text": text}
+    return {
+        "seconds": dt,
+        "first_token_s": progress.first,
+        "tokens": len(new),
+        "text": text,
+    }
 
 
 results = {"pdf": pdf_path, "page": int(page_idx), "threads": threads}
