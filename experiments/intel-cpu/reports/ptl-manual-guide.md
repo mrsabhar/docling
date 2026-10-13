@@ -104,6 +104,7 @@ Linux:
 
 ```bash
 cp -r ../docling-ptl-kit/experiments .
+chmod +x experiments/intel-cpu/run_bench.sh experiments/intel-cpu/granite-docling-ov/run.sh
 git status --short          # expected: ?? experiments/
 ```
 
