@@ -1,0 +1,189 @@
+[
+  {
+    "document": "2203.01017v2.pdf",
+    "markdown_identical": true,
+    "doctags_identical": true,
+    "clusters": [
+      232,
+      232
+    ],
+    "cluster_labels_identical": true,
+    "max_box_diff_pt": 0.00023651123046875
+  },
+  {
+    "document": "2206.01062.pdf",
+    "markdown_identical": true,
+    "doctags_identical": true,
+    "clusters": [
+      149,
+      149
+    ],
+    "cluster_labels_identical": true,
+    "max_box_diff_pt": 0.000152587890625
+  },
+  {
+    "document": "2305.03393v1-pg9.pdf",
+    "markdown_identical": true,
+    "doctags_identical": true,
+    "clusters": [
+      10,
+      10
+    ],
+    "cluster_labels_identical": true,
+    "max_box_diff_pt": 9.1552734375e-05
+  },
+  {
+    "document": "2305.03393v1.pdf",
+    "markdown_identical": true,
+    "doctags_identical": true,
+    "clusters": [
+      131,
+      131
+    ],
+    "cluster_labels_identical": true,
+    "max_box_diff_pt": 0.0001220703125
+  },
+  {
+    "document": "amt_handbook_sample.pdf",
+    "markdown_identical": true,
+    "doctags_identical": true,
+    "clusters": [
+      18,
+      18
+    ],
+    "cluster_labels_identical": true,
+    "max_box_diff_pt": 0.0001220703125
+  },
+  {
+    "document": "code_and_formula.pdf",
+    "markdown_identical": true,
+    "doctags_identical": true,
+    "clusters": [
+      16,
+      16
+    ],
+    "cluster_labels_identical": true,
+    "max_box_diff_pt": 0.0
+  },
+  {
+    "document": "elsevier-00.pdf",
+    "markdown_identical": true,
+    "doctags_identical": true,
+    "clusters": [
+      320,
+      320
+    ],
+    "cluster_labels_identical": true,
+    "max_box_diff_pt": 0.00018303651586393244
+  },
+  {
+    "document": "multi_page.pdf",
+    "markdown_identical": true,
+    "doctags_identical": true,
+    "clusters": [
+      53,
+      53
+    ],
+    "cluster_labels_identical": true,
+    "max_box_diff_pt": 0.0
+  },
+  {
+    "document": "newspaper-00.pdf",
+    "markdown_identical": true,
+    "doctags_identical": true,
+    "clusters": [
+      67,
+      67
+    ],
+    "cluster_labels_identical": true,
+    "max_box_diff_pt": 0.00018309676283934095
+  },
+  {
+    "document": "normal_4pages.pdf",
+    "markdown_identical": true,
+    "doctags_identical": true,
+    "clusters": [
+      88,
+      88
+    ],
+    "cluster_labels_identical": true,
+    "max_box_diff_pt": 0.0001220703125
+  },
+  {
+    "document": "picture_classification.pdf",
+    "markdown_identical": true,
+    "doctags_identical": true,
+    "clusters": [
+      11,
+      11
+    ],
+    "cluster_labels_identical": true,
+    "max_box_diff_pt": 6.103515625e-05
+  },
+  {
+    "document": "redp5110_sampled.pdf",
+    "markdown_identical": true,
+    "doctags_identical": true,
+    "clusters": [
+      186,
+      186
+    ],
+    "cluster_labels_identical": true,
+    "max_box_diff_pt": 0.000152587890625
+  },
+  {
+    "document": "right_to_left_01.pdf",
+    "markdown_identical": true,
+    "doctags_identical": true,
+    "clusters": [
+      2,
+      2
+    ],
+    "cluster_labels_identical": true,
+    "max_box_diff_pt": 0.0
+  },
+  {
+    "document": "right_to_left_02.pdf",
+    "markdown_identical": true,
+    "doctags_identical": true,
+    "clusters": [
+      5,
+      5
+    ],
+    "cluster_labels_identical": true,
+    "max_box_diff_pt": 0.0
+  },
+  {
+    "document": "right_to_left_03.pdf",
+    "markdown_identical": true,
+    "doctags_identical": true,
+    "clusters": [
+      18,
+      18
+    ],
+    "cluster_labels_identical": true,
+    "max_box_diff_pt": 6.0965650050093245e-05
+  },
+  {
+    "document": "table_misidentified_as_form.pdf",
+    "markdown_identical": true,
+    "doctags_identical": true,
+    "clusters": [
+      59,
+      59
+    ],
+    "cluster_labels_identical": true,
+    "max_box_diff_pt": 0.00018310546875
+  },
+  {
+    "document": "table_mislabeled_as_picture.pdf",
+    "markdown_identical": true,
+    "doctags_identical": true,
+    "clusters": [
+      33,
+      33
+    ],
+    "cluster_labels_identical": true,
+    "max_box_diff_pt": 0.0001678466796875
+  }
+]

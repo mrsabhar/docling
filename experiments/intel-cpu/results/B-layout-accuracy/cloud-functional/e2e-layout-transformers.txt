@@ -1,0 +1,67 @@
+============================= test session starts ==============================
+platform linux -- Python 3.12.3, pytest-9.0.3, pluggy-1.6.0
+rootdir: /home/user/docling-ov
+configfile: pyproject.toml
+plugins: Faker-40.41.0, anyio-4.15.1
+collected 1 item
+
+experiments/intel-cpu/tests/test_e2e_layout_engine.py 
+layout engine: transformers
+converting tests/data/pdf/sources/2203.01017v2.pdf
+Loading weights:   0%|          | 0/770 [00:00<?, ?it/s]Loading weights:   7%|▋         | 57/770 [00:00<00:01, 440.90it/s]Loading weights:  13%|█▎        | 102/770 [00:00<00:02, 254.42it/s]Loading weights:  17%|█▋        | 132/770 [00:00<00:04, 158.77it/s]Loading weights:  20%|█▉        | 152/770 [00:01<00:05, 111.15it/s]Loading weights:  22%|██▏       | 167/770 [00:01<00:05, 105.84it/s]Loading weights:  23%|██▎       | 180/770 [00:01<00:07, 77.99it/s] Loading weights:  25%|██▍       | 190/770 [00:01<00:08, 65.68it/s]Loading weights:  26%|██▌       | 202/770 [00:02<00:09, 61.76it/s]Loading weights:  27%|██▋       | 211/770 [00:02<00:09, 61.33it/s]Loading weights:  29%|██▊       | 221/770 [00:02<00:08, 64.98it/s]Loading weights:  30%|██▉       | 229/770 [00:02<00:12, 44.75it/s]Loading weights:  31%|███       | 235/770 [00:03<00:15, 34.35it/s]Loading weights:  31%|███       | 240/770 [00:03<00:16, 32.07it/s]Loading weights:  32%|███▏      | 247/770 [00:03<00:18, 27.82it/s]Loading weights:  34%|███▎      | 258/770 [00:03<00:15, 33.29it/s]Loading weights:  34%|███▍      | 262/770 [00:03<00:16, 31.00it/s]Loading weights:  35%|███▌      | 272/770 [00:04<00:12, 40.11it/s]Loading weights:  38%|███▊      | 291/770 [00:04<00:07, 61.67it/s]Loading weights:  41%|████▏     | 318/770 [00:04<00:04, 95.97it/s]Loading weights:  43%|████▎     | 330/770 [00:04<00:04, 95.10it/s]Loading weights:  45%|████▍     | 345/770 [00:04<00:05, 77.35it/s]Loading weights:  47%|████▋     | 361/770 [00:04<00:04, 86.33it/s]Loading weights:  48%|████▊     | 371/770 [00:05<00:04, 85.94it/s]Loading weights:  49%|████▉     | 381/770 [00:05<00:04, 88.13it/s]Loading weights:  51%|█████     | 391/770 [00:05<00:04, 76.44it/s]Loading weights:  52%|█████▏    | 402/770 [00:05<00:04, 79.86it/s]Loading weights:  53%|█████▎    | 411/770 [00:05<00:04, 81.42it/s]Loading weights:  57%|█████▋    | 437/770 [00:05<00:02, 111.89it/s]Loading weights:  58%|█████▊    | 449/770 [00:05<00:03, 85.73it/s] Loading weights:  60%|██████    | 465/770 [00:06<00:03, 93.59it/s]Loading weights:  63%|██████▎   | 482/770 [00:06<00:03, 90.38it/s]Loading weights:  65%|██████▍   | 497/770 [00:06<00:03, 88.07it/s]Loading weights:  66%|██████▋   | 511/770 [00:06<00:02, 93.75it/s]Loading weights:  68%|██████▊   | 522/770 [00:06<00:02, 89.04it/s]Loading weights:  69%|██████▉   | 535/770 [00:06<00:03, 72.79it/s]Loading weights:  72%|███████▏  | 556/770 [00:07<00:02, 93.09it/s]Loading weights:  77%|███████▋  | 592/770 [00:07<00:01, 139.90it/s]Loading weights:  79%|███████▉  | 608/770 [00:07<00:01, 123.38it/s]Loading weights:  81%|████████  | 622/770 [00:07<00:01, 115.94it/s]Loading weights:  83%|████████▎ | 642/770 [00:07<00:01, 126.62it/s]Loading weights:  86%|████████▌ | 661/770 [00:08<00:01, 96.66it/s] Loading weights:  89%|████████▉ | 687/770 [00:08<00:00, 117.86it/s]Loading weights:  91%|█████████ | 701/770 [00:08<00:00, 83.28it/s] Loading weights:  95%|█████████▍| 728/770 [00:08<00:00, 112.90it/s]Loading weights:  97%|█████████▋| 748/770 [00:08<00:00, 126.77it/s]Loading weights:  99%|█████████▉| 765/770 [00:08<00:00, 120.77it/s]Loading weights: 100%|██████████| 770/770 [00:08<00:00, 86.94it/s] 
+converting tests/data/pdf/sources/2206.01062.pdf
+converting tests/data/pdf/sources/2305.03393v1-pg9.pdf
+converting tests/data/pdf/sources/2305.03393v1.pdf
+converting tests/data/pdf/sources/amt_handbook_sample.pdf
+converting tests/data/pdf/sources/code_and_formula.pdf
+converting tests/data/pdf/sources/elsevier-00.pdf
+converting tests/data/pdf/sources/multi_page.pdf
+converting tests/data/pdf/sources/newspaper-00.pdf
+converting tests/data/pdf/sources/normal_4pages.pdf
+converting tests/data/pdf/sources/picture_classification.pdf
+converting tests/data/pdf/sources/redp5110_sampled.pdf
+converting tests/data/pdf/sources/right_to_left_01.pdf
+converting tests/data/pdf/sources/right_to_left_02.pdf
+converting tests/data/pdf/sources/right_to_left_03.pdf
+converting tests/data/pdf/sources/table_misidentified_as_form.pdf
+converting tests/data/pdf/sources/table_mislabeled_as_picture.pdf
+
++---------------------------------+-------+--------+-------+
+| document                        | check | status | error |
++---------------------------------+-------+--------+-------+
+| 2203.01017v2.pdf                | all   | PASS   |       |
+| 2206.01062.pdf                  | all   | PASS   |       |
+| 2305.03393v1-pg9.pdf            | all   | PASS   |       |
+| 2305.03393v1.pdf                | all   | PASS   |       |
+| amt_handbook_sample.pdf         | all   | PASS   |       |
+| code_and_formula.pdf            | all   | PASS   |       |
+| elsevier-00.pdf                 | all   | PASS   |       |
+| multi_page.pdf                  | all   | PASS   |       |
+| newspaper-00.pdf                | all   | PASS   |       |
+| normal_4pages.pdf               | all   | PASS   |       |
+| picture_classification.pdf      | all   | PASS   |       |
+| redp5110_sampled.pdf            | all   | PASS   |       |
+| right_to_left_01.pdf            | all   | PASS   |       |
+| right_to_left_02.pdf            | all   | PASS   |       |
+| right_to_left_03.pdf            | all   | PASS   |       |
+| table_misidentified_as_form.pdf | all   | PASS   |       |
+| table_mislabeled_as_picture.pdf | all   | PASS   |       |
++---------------------------------+-------+--------+-------+
+
+.
+
+=============================== warnings summary ===============================
+experiments/intel-cpu/tests/test_e2e_layout_engine.py: 17 warnings
+  /home/user/docling-ov/experiments/intel-cpu/uvproject/.venv/lib/python3.12/site-packages/pydantic/main.py:542: DeprecationWarning: `force_full_page_ocr` is deprecated; set `mode=OcrMode.FULL_PAGE` instead.
+    return self.__pydantic_serializer__.to_json(
+
+experiments/intel-cpu/tests/test_e2e_layout_engine.py::test_e2e_pdfs_conversions_with_layout_engine
+  /home/user/docling-ov/docling/pipeline/standard_pdf_pipeline.py:606: DeprecationWarning: This field is deprecated. Use `generate_page_images=True` and call `TableItem.get_image()` to extract table images from page images.
+    or self.pipeline_options.generate_table_images
+
+experiments/intel-cpu/tests/test_e2e_layout_engine.py::test_e2e_pdfs_conversions_with_layout_engine
+  /home/user/docling-ov/experiments/intel-cpu/uvproject/.venv/lib/python3.12/site-packages/docling_core/types/doc/document.py:1615: DeprecationWarning: ListItem parent must be a list group, creating one on the fly.
+    warnings.warn(
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+================== 1 passed, 19 warnings in 302.94s (0:05:02) ==================

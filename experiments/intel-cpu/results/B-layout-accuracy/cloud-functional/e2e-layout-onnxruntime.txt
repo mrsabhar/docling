@@ -1,0 +1,66 @@
+============================= test session starts ==============================
+platform linux -- Python 3.12.3, pytest-9.0.3, pluggy-1.6.0
+rootdir: /home/user/docling-ov
+configfile: pyproject.toml
+plugins: Faker-40.41.0, anyio-4.15.1
+collected 1 item
+
+experiments/intel-cpu/tests/test_e2e_layout_engine.py 
+layout engine: onnxruntime
+converting tests/data/pdf/sources/2203.01017v2.pdf
+converting tests/data/pdf/sources/2206.01062.pdf
+converting tests/data/pdf/sources/2305.03393v1-pg9.pdf
+converting tests/data/pdf/sources/2305.03393v1.pdf
+converting tests/data/pdf/sources/amt_handbook_sample.pdf
+converting tests/data/pdf/sources/code_and_formula.pdf
+converting tests/data/pdf/sources/elsevier-00.pdf
+converting tests/data/pdf/sources/multi_page.pdf
+converting tests/data/pdf/sources/newspaper-00.pdf
+converting tests/data/pdf/sources/normal_4pages.pdf
+converting tests/data/pdf/sources/picture_classification.pdf
+converting tests/data/pdf/sources/redp5110_sampled.pdf
+converting tests/data/pdf/sources/right_to_left_01.pdf
+converting tests/data/pdf/sources/right_to_left_02.pdf
+converting tests/data/pdf/sources/right_to_left_03.pdf
+converting tests/data/pdf/sources/table_misidentified_as_form.pdf
+converting tests/data/pdf/sources/table_mislabeled_as_picture.pdf
+
++---------------------------------+-------+--------+-------+
+| document                        | check | status | error |
++---------------------------------+-------+--------+-------+
+| 2203.01017v2.pdf                | all   | PASS   |       |
+| 2206.01062.pdf                  | all   | PASS   |       |
+| 2305.03393v1-pg9.pdf            | all   | PASS   |       |
+| 2305.03393v1.pdf                | all   | PASS   |       |
+| amt_handbook_sample.pdf         | all   | PASS   |       |
+| code_and_formula.pdf            | all   | PASS   |       |
+| elsevier-00.pdf                 | all   | PASS   |       |
+| multi_page.pdf                  | all   | PASS   |       |
+| newspaper-00.pdf                | all   | PASS   |       |
+| normal_4pages.pdf               | all   | PASS   |       |
+| picture_classification.pdf      | all   | PASS   |       |
+| redp5110_sampled.pdf            | all   | PASS   |       |
+| right_to_left_01.pdf            | all   | PASS   |       |
+| right_to_left_02.pdf            | all   | PASS   |       |
+| right_to_left_03.pdf            | all   | PASS   |       |
+| table_misidentified_as_form.pdf | all   | PASS   |       |
+| table_mislabeled_as_picture.pdf | all   | PASS   |       |
++---------------------------------+-------+--------+-------+
+
+.
+
+=============================== warnings summary ===============================
+experiments/intel-cpu/tests/test_e2e_layout_engine.py: 17 warnings
+  /home/user/docling-ov/experiments/intel-cpu/uvproject/.venv/lib/python3.12/site-packages/pydantic/main.py:542: DeprecationWarning: `force_full_page_ocr` is deprecated; set `mode=OcrMode.FULL_PAGE` instead.
+    return self.__pydantic_serializer__.to_json(
+
+experiments/intel-cpu/tests/test_e2e_layout_engine.py::test_e2e_pdfs_conversions_with_layout_engine
+  /home/user/docling-ov/docling/pipeline/standard_pdf_pipeline.py:606: DeprecationWarning: This field is deprecated. Use `generate_page_images=True` and call `TableItem.get_image()` to extract table images from page images.
+    or self.pipeline_options.generate_table_images
+
+experiments/intel-cpu/tests/test_e2e_layout_engine.py::test_e2e_pdfs_conversions_with_layout_engine
+  /home/user/docling-ov/experiments/intel-cpu/uvproject/.venv/lib/python3.12/site-packages/docling_core/types/doc/document.py:1615: DeprecationWarning: ListItem parent must be a list group, creating one on the fly.
+    warnings.warn(
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+================== 1 passed, 19 warnings in 180.97s (0:03:00) ==================

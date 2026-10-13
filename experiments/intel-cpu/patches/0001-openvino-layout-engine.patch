@@ -1,0 +1,361 @@
+diff --git a/docling/datamodel/object_detection_engine_options.py b/docling/datamodel/object_detection_engine_options.py
+index 1e4614c..0ac9ab4 100644
+--- a/docling/datamodel/object_detection_engine_options.py
++++ b/docling/datamodel/object_detection_engine_options.py
+@@ -5,7 +5,8 @@
+ 
+ from __future__ import annotations
+ 
+-from typing import List, Literal
++from pathlib import Path
++from typing import List, Literal, Optional
+ 
+ from pydantic import Field
+ 
+@@ -50,6 +51,44 @@ class OnnxRuntimeObjectDetectionEngineOptions(BaseObjectDetectionEngineOptions):
+     )
+ 
+ 
++class OpenVinoObjectDetectionEngineOptions(BaseObjectDetectionEngineOptions):
++    """Runtime configuration for OpenVINO based object-detection models.
++
++    Loads the same ONNX export as the ONNX Runtime engine and compiles it with
++    OpenVINO Runtime. Preprocessing parameters come from HuggingFace
++    preprocessor configs, not from these options.
++    """
++
++    engine_type: Literal[ObjectDetectionEngineType.OPENVINO] = (
++        ObjectDetectionEngineType.OPENVINO
++    )
++
++    model_filename: str = Field(
++        default="model.onnx",
++        description="Filename of the ONNX export inside the model repository",
++    )
++
++    device: str = Field(
++        default="CPU",
++        description="OpenVINO device name passed to compile_model (e.g. 'CPU', 'GPU')",
++    )
++
++    performance_hint: Literal["LATENCY", "THROUGHPUT", "CUMULATIVE_THROUGHPUT"] = Field(
++        default="LATENCY",
++        description="OpenVINO PERFORMANCE_HINT for the compiled model",
++    )
++
++    num_streams: Optional[int] = Field(
++        default=None,
++        description="OpenVINO NUM_STREAMS. None keeps the value derived from the hint.",
++    )
++
++    cache_dir: Optional[Path] = Field(
++        default=None,
++        description="Folder for the OpenVINO compiled-model cache. None disables it.",
++    )
++
++
+ class TransformersObjectDetectionEngineOptions(BaseObjectDetectionEngineOptions):
+     """Runtime configuration for Transformers-based object-detection models."""
+ 
+diff --git a/docling/datamodel/stage_model_specs.py b/docling/datamodel/stage_model_specs.py
+index da0dda6..7054a21 100644
+--- a/docling/datamodel/stage_model_specs.py
++++ b/docling/datamodel/stage_model_specs.py
+@@ -1020,7 +1020,11 @@ OBJECT_DETECTION_LAYOUT_HERON = ObjectDetectionStagePreset(
+             ObjectDetectionEngineType.ONNXRUNTIME: EngineModelConfig(
+                 repo_id="docling-project/docling-layout-heron-onnx",
+                 extra_config={"model_filename": "model.onnx"},
+-            )
++            ),
++            ObjectDetectionEngineType.OPENVINO: EngineModelConfig(
++                repo_id="docling-project/docling-layout-heron-onnx",
++                extra_config={"model_filename": "model.onnx"},
++            ),
+         },
+     ),
+     default_engine_type=ObjectDetectionEngineType.TRANSFORMERS,
+diff --git a/docling/models/inference_engines/object_detection/base.py b/docling/models/inference_engines/object_detection/base.py
+index 9771f58..98d4aa7 100644
+--- a/docling/models/inference_engines/object_detection/base.py
++++ b/docling/models/inference_engines/object_detection/base.py
+@@ -35,6 +35,7 @@ class ObjectDetectionEngineType(str, Enum):
+     """Supported inference engine types for object-detection models."""
+ 
+     ONNXRUNTIME = "onnxruntime"
++    OPENVINO = "openvino"
+     TRANSFORMERS = "transformers"
+     API_KSERVE_V2 = "api_kserve_v2"
+ 
+diff --git a/docling/models/inference_engines/object_detection/factory.py b/docling/models/inference_engines/object_detection/factory.py
+index f5114d7..1d2b683 100644
+--- a/docling/models/inference_engines/object_detection/factory.py
++++ b/docling/models/inference_engines/object_detection/factory.py
+@@ -69,6 +69,26 @@ def create_object_detection_engine(
+             accelerator_options=accelerator_options,
+         )
+ 
++    elif options.engine_type == ObjectDetectionEngineType.OPENVINO:
++        from docling.datamodel.object_detection_engine_options import (
++            OpenVinoObjectDetectionEngineOptions,
++        )
++        from docling.models.inference_engines.object_detection.openvino_engine import (
++            OpenVinoObjectDetectionEngine,
++        )
++
++        if not isinstance(options, OpenVinoObjectDetectionEngineOptions):
++            raise ValueError(
++                f"Expected OpenVinoObjectDetectionEngineOptions, got {type(options)}"
++            )
++
++        return OpenVinoObjectDetectionEngine(
++            options=options,
++            model_config=model_config,
++            artifacts_path=artifacts_path,
++            accelerator_options=accelerator_options,
++        )
++
+     elif options.engine_type == ObjectDetectionEngineType.TRANSFORMERS:
+         from docling.datamodel.object_detection_engine_options import (
+             TransformersObjectDetectionEngineOptions,
+diff --git a/docling/models/inference_engines/object_detection/openvino_engine.py b/docling/models/inference_engines/object_detection/openvino_engine.py
+new file mode 100644
+index 0000000..c011fef
+--- /dev/null
++++ b/docling/models/inference_engines/object_detection/openvino_engine.py
+@@ -0,0 +1,155 @@
++# SPDX-FileCopyrightText: The Docling Contributors
++# SPDX-License-Identifier: MIT
++
++"""OpenVINO implementation for RT-DETR style object-detection models."""
++
++from __future__ import annotations
++
++import logging
++from pathlib import Path
++from typing import TYPE_CHECKING, Any, List, Optional, Union
++
++import numpy as np
++
++if TYPE_CHECKING:
++    import openvino as ov
++
++from docling.datamodel.accelerator_options import AcceleratorOptions
++from docling.datamodel.object_detection_engine_options import (
++    OpenVinoObjectDetectionEngineOptions,
++)
++from docling.models.inference_engines.object_detection.base import (
++    ObjectDetectionEngineInput,
++    ObjectDetectionEngineOutput,
++)
++from docling.models.inference_engines.object_detection.hf_base import (
++    HfObjectDetectionEngineBase,
++)
++
++if TYPE_CHECKING:
++    from docling.datamodel.stage_model_specs import EngineModelConfig
++
++_log = logging.getLogger(__name__)
++
++
++class OpenVinoObjectDetectionEngine(HfObjectDetectionEngineBase):
++    """OpenVINO engine for object detection models.
++
++    Loads the same ONNX export and uses the same HuggingFace preprocessing and
++    output handling as the ONNX Runtime engine, so outputs stay comparable.
++    """
++
++    def __init__(
++        self,
++        *,
++        options: OpenVinoObjectDetectionEngineOptions,
++        model_config: Optional[EngineModelConfig] = None,
++        accelerator_options: AcceleratorOptions,
++        artifacts_path: Optional[Union[Path, str]] = None,
++    ):
++        super().__init__(
++            options=options,
++            model_config=model_config,
++            accelerator_options=accelerator_options,
++            artifacts_path=artifacts_path,
++        )
++        self.options: OpenVinoObjectDetectionEngineOptions = options
++        self._compiled_model: Optional[ov.CompiledModel] = None
++        self._model_path: Optional[Path] = None
++
++    def _resolve_model_artifacts(self) -> tuple[Path, Path]:
++        """Resolve model artifacts from artifacts_path or HF download."""
++        model_filename = self.options.model_filename
++        extra_filename = self._model_config.extra_config.get("model_filename")
++        if extra_filename and isinstance(extra_filename, str):
++            model_filename = extra_filename
++
++        model_folder = self._resolve_model_folder(
++            repo_id=self._repo_id,
++            revision=str(self._model_config.revision or "main"),
++        )
++        model_path = model_folder / model_filename
++        if not model_path.exists():
++            raise FileNotFoundError(
++                f"ONNX model file '{model_filename}' not found: {model_path}"
++            )
++        return model_folder, model_path
++
++    def _compile_config(self) -> dict[str, Any]:
++        config: dict[str, Any] = {
++            "PERFORMANCE_HINT": self.options.performance_hint,
++            "INFERENCE_NUM_THREADS": self._accelerator_options.num_threads,
++        }
++        if self.options.num_streams is not None:
++            config["NUM_STREAMS"] = self.options.num_streams
++        if self.options.cache_dir is not None:
++            config["CACHE_DIR"] = str(self.options.cache_dir)
++        return config
++
++    def initialize(self) -> None:
++        """Compile the ONNX model with OpenVINO and load the preprocessor."""
++        import openvino as ov
++
++        _log.info("Initializing OpenVINO object-detection engine")
++
++        model_folder, self._model_path = self._resolve_model_artifacts()
++        _log.debug(f"Using ONNX model at {self._model_path}")
++
++        self._processor = self._load_preprocessor(model_folder)
++        self._id_to_label = self._load_label_mapping(model_folder)
++
++        core = ov.Core()
++        config = self._compile_config()
++        self._compiled_model = core.compile_model(
++            str(self._model_path), self.options.device, config
++        )
++
++        self._initialized = True
++        _log.info(
++            f"OpenVINO engine ready (device={self.options.device}, config={config})"
++        )
++
++    def predict_batch(
++        self, input_batch: List[ObjectDetectionEngineInput]
++    ) -> List[ObjectDetectionEngineOutput]:
++        """Run inference on a batch of inputs."""
++        if not input_batch:
++            return []
++        if self._compiled_model is None or self._processor is None:
++            raise RuntimeError("Engine not initialized. Call initialize() first.")
++
++        images = [item.image.convert("RGB") for item in input_batch]
++        inputs = self._processor(images=images, return_tensors="np")
++        orig_sizes = np.array(
++            [[img.width, img.height] for img in images], dtype=np.int64
++        )
++
++        # One infer request per call: the layout stage may call from one
++        # thread at a time, and a fresh request keeps the engine re-entrant.
++        request = self._compiled_model.create_infer_request()
++        results = request.infer(
++            {
++                "images": inputs["pixel_values"],
++                "orig_target_sizes": orig_sizes,
++            }
++        )
++        output_tensors = [results[output] for output in self._compiled_model.outputs]
++
++        if len(output_tensors) < 3:
++            raise RuntimeError(
++                "Expected ONNX model to return at least 3 outputs: "
++                "[labels, boxes, scores]"
++            )
++
++        labels_batch, boxes_batch, scores_batch = output_tensors[:3]
++
++        return [
++            self._build_output(
++                input_item=input_item,
++                labels=labels_batch[idx],
++                scores=scores_batch[idx],
++                boxes=boxes_batch[idx],
++                apply_score_threshold=True,
++            )
++            for idx, input_item in enumerate(input_batch)
++        ]
+diff --git a/tests/test_openvino_object_detection_engine.py b/tests/test_openvino_object_detection_engine.py
+new file mode 100644
+index 0000000..4777c77
+--- /dev/null
++++ b/tests/test_openvino_object_detection_engine.py
+@@ -0,0 +1,75 @@
++from pathlib import Path
++
++import pytest
++
++from docling.datamodel.accelerator_options import AcceleratorOptions
++from docling.datamodel.object_detection_engine_options import (
++    OnnxRuntimeObjectDetectionEngineOptions,
++    OpenVinoObjectDetectionEngineOptions,
++)
++from docling.datamodel.pipeline_options import LayoutObjectDetectionOptions
++from docling.datamodel.stage_model_specs import OBJECT_DETECTION_LAYOUT_HERON
++from docling.models.inference_engines.object_detection.base import (
++    ObjectDetectionEngineInput,
++    ObjectDetectionEngineType,
++)
++from docling.models.inference_engines.object_detection.factory import (
++    create_object_detection_engine,
++)
++
++
++def test_openvino_engine_options_resolve_from_dict():
++    layout_options = LayoutObjectDetectionOptions.model_validate(
++        {
++            "engine_options": {
++                "engine_type": "openvino",
++                "performance_hint": "THROUGHPUT",
++                "num_streams": 2,
++            }
++        }
++    )
++
++    engine_options = layout_options.engine_options
++    assert isinstance(engine_options, OpenVinoObjectDetectionEngineOptions)
++    assert engine_options.performance_hint == "THROUGHPUT"
++    assert engine_options.num_streams == 2
++
++
++def test_openvino_heron_uses_onnx_export():
++    config = OBJECT_DETECTION_LAYOUT_HERON.model_spec.get_engine_config(
++        ObjectDetectionEngineType.OPENVINO
++    )
++    assert config.repo_id == "docling-project/docling-layout-heron-onnx"
++    assert config.extra_config["model_filename"] == "model.onnx"
++
++
++def test_openvino_matches_onnxruntime_on_heron():
++    pytest.importorskip("openvino")
++    pytest.importorskip("onnxruntime")
++    import pypdfium2
++
++    pdf = pypdfium2.PdfDocument(Path("tests/data/pdf/sources/2206.01062.pdf"))
++    image = pdf[0].render(scale=1.0).to_pil()
++    batch = [ObjectDetectionEngineInput(image=image)]
++    accelerator_options = AcceleratorOptions(device="cpu", num_threads=2)
++
++    outputs = {}
++    for options in (
++        OnnxRuntimeObjectDetectionEngineOptions(),
++        OpenVinoObjectDetectionEngineOptions(),
++    ):
++        engine = create_object_detection_engine(
++            options=options,
++            model_spec=OBJECT_DETECTION_LAYOUT_HERON.model_spec,
++            accelerator_options=accelerator_options,
++        )
++        engine.initialize()
++        outputs[options.engine_type] = engine.predict_batch(batch)[0]
++
++    reference = outputs[ObjectDetectionEngineType.ONNXRUNTIME]
++    candidate = outputs[ObjectDetectionEngineType.OPENVINO]
++    assert reference.label_ids
++    assert candidate.label_ids == reference.label_ids
++    assert candidate.scores == pytest.approx(reference.scores, abs=1e-3)
++    for got, expected in zip(candidate.bboxes, reference.bboxes):
++        assert got == pytest.approx(expected, abs=1.0)
